@@ -1,0 +1,23 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="FooterMenu.ascx.cs" Inherits="Controls_FooterMenu" %>
+<asp:menu ID="menuFooter" 
+    Runat="server" 
+    dynamicverticaloffset="0" 
+    staticdisplaylevels="1"
+    orientation="Horizontal"  
+    Font-Size="9pt" 
+    StaticHoverStyle-ForeColor="#B1A9A9" 
+    StaticSelectedStyle-ForeColor="#B1A9A9" 
+    Font-Strikeout="False"
+     ItemWrap="True" 
+    StaticMenuItemStyle-ForeColor="#B1A9A9" 
+    StaticMenuStyle-ForeColor="#B1A9A9" 
+    Font-Names="OptimaCyr" 
+    StaticMenuStyle-HorizontalPadding="20px" 
+    StaticMenuStyle-VerticalPadding="10px" 
+    EnableViewState="True"   
+     Font-Overline="False" 
+     RenderingMode="List" 
+     StaticMenuItemStyle-HorizontalPadding="10px" 
+      ViewStateMode="Inherit"
+    >
+ </asp:menu>

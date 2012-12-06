@@ -1,0 +1,410 @@
+﻿form
+{
+    background:  url('../Images/officebg.jpg') 0px 0px  no-repeat  #fff;   
+    height:100% 
+}
+body
+{
+    min-height:100%
+}
+*{
+	margin:0;
+	padding:0;
+}
+table
+{
+    margin:0;
+	padding:0;
+}
+a{	  color: #ffc33f; 
+	text-decoration: none;
+	outline: none;
+	CURSOR: pointer;
+}
+a:hover, a:active
+{
+    text-decoration: underline !important;
+}
+.officemenu
+{ background:#333333;    
+    color:#b1a9a9;
+    margin-left:0px;
+    padding:20px;
+    margin-top:45px;
+    -webkit-border-radius:0px 20px 20px 0px;
+    -moz-border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 20px 20px 0px;
+    behavior: url(~/PIE.htc);
+    width:320px !important;
+}
+.officecategoriedit
+{
+    width:800px;
+    margin-left:30px;   
+    margin-bottom:40px;
+}
+.pageName
+{   padding:20px;
+    width:800px;
+    margin-left:30px;
+    font-weight:bold;
+}
+ #ctl00_cphWithoutScroll_CategoryEditID_pnlGalleryList
+{  -webkit-border-radius: 20px 20px 20px 20px  !important;
+    -moz-border-radius: 20px 20px 20px 20px !important;
+    border-radius: 20px 20px 20px 20px !important;
+    behavior: url(PIE.htc) !important;
+    border:2px solid #ffc33f !important;
+    padding:20px !important;
+    background-color:#fff !important;
+}
+h3
+{
+    color: #000;
+    font-size: 16pt;
+    font-family: OptimaCyr;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.rtsIn
+{
+    color: #000 !important;
+}
+.RadTabStripTop_Sitefinity .rtsLink, .RadTabStripTop_Sitefinity .rtsOut, .RadTabStripTop_Sitefinity .rtsIn, .RadTabStripBottom_Sitefinity .rtsLink, .RadTabStripBottom_Sitefinity .rtsOut
+{
+      color: #000 !important;
+
+}
+.ChangePassword
+{
+     color: #ffc33f;
+    font-size: 12pt;
+    font-family: OptimaCyr;
+}
+#hlChangePassword
+{
+      color: #ffc33f;
+    font-size: 12pt;
+    font-family: OptimaCyr;
+}
+.RadTabStripTop_Sitefinity .rtsLink, .RadTabStripTop_Sitefinity .rtsOut, .RadTabStripTop_Sitefinity .rtsIn, .RadTabStripBottom_Sitefinity .rtsLink, .RadTabStripBottom_Sitefinity .rtsOut, .RadTabStripBottom_Sitefinity .rtsIn
+{
+    background-image: url('../Images/WebResource2.png') !important;
+   
+}
+.rtsTxt
+{
+    color: #000 !important;
+    font-size: 12pt!important;
+    font-weight:bold;
+    
+}
+
+.textBoxStyle
+{
+    border: 1px solid #b1a9a9;
+    height: 20px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    behavior: url(PIE.htc);
+    margin-bottom: 5px;
+}
+input.riDisplay, input.riFocused, input.riEnabled, input.riHover
+{
+      border: 1px solid #b1a9a9 !important;
+    height: 20px !important;
+    -webkit-border-radius: 5px 5px 5px 5px !important;
+    -moz-border-radius: 5px 5px 5px 5px !important;
+    border-radius: 5px 5px 5px 5px !important;
+    behavior: url(PIE.htc);
+    margin-bottom: 5px !important;
+}
+.RadTabStripTop_Transparent .rtsLevel1 {
+    background-position: 0 80%  !important;
+}
+.tabsstyle
+{
+    margin-left:30px !important;
+}
+.rgMasterTable
+{
+    width:730px !important;
+}
+.VIKKI_HiddenButton
+{
+	visibility: hidden;
+	display: none;
+	position: absolute;
+	left: -100px;
+}
+.VIKKI_HandCursor
+{
+    CURSOR: pointer;
+}
+#hoverNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 95%;
+	width: 98%;
+	z-index: 10;
+}
+#hoverNav a{ outline: none;}
+
+
+.VIKKI_PrevImageLink
+{
+	width: 49%;
+	height: 98%;
+	background: transparent url(../Images/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	z-index: 1000;
+	left: 0; 
+	float: left;
+}
+
+.VIKKI_NextImageLink
+{
+	width: 49%;
+	height: 98%;
+	background: transparent url(../Images/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	z-index: 1000;
+	right: 0; 
+	float: right; 
+}
+
+.VIKKI_PrevImageLink:hover {
+	 background: url(../Images/prevlabel.gif) left 15% no-repeat;
+}
+
+.VIKKI_PrevImageLink:visited:hover {
+	 background: url(../Images/prevlabel.gif) left 15% no-repeat;
+}
+
+.VIKKI_NextImageLink:hover {
+	 background: url(../Images/nextlabel.gif) right 15% no-repeat;
+}
+
+.VIKKI_NextImageLink:visited:hover {
+	 background: url(../Images/nextlabel.gif) right 15% no-repeat;
+}
+
+.VIKKI_ImageBackground
+{
+	background-color: White;
+}
+.ctl00_ddLanguage_Arrow
+{
+    background-color: #000 !important;
+    background-image: url('../Images/WebResource.png') !important;
+}
+.RadComboBox .rcbReadOnly td.rcbArrowCell a
+{    background-color: #000 !important;
+    background-image: url('../Images/WebResource.png') !important;
+}
+.RadComboBox_Metro .rcbFocused .rcbArrowCell, .RadComboBox_Metro .rcbFocused .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbFocused .rcbReadOnly .rcbArrowCellHidden 
+{
+    background-color: #000 !important;
+}
+div.RadComboBox_Metro .rcbFocused .rcbArrowCell, div.RadComboBox_Metro .rcbFocused .rcbInputCell 
+{
+     background-color: #000 !important;
+}
+RadComboBox_Metro, .RadComboBox_Metro .rcbInput, .RadComboBoxDropDown_Metro 
+{
+     color: #ffc33f !important;
+}
+div.RadComboBox_Metro table td.rcbInputCellLeft {
+    border-width:  0 !important;
+}
+.RadComboBox_Metro .rcbHovered .rcbArrowCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbArrowCellHidden 
+{
+   background-color: #000 !important;
+}
+div.RadComboBox_Metro .rcbHovered .rcbArrowCell, div.RadComboBox_Metro .rcbHovered .rcbInputCell 
+{
+  background-color: #000 !important;
+}
+div.RadComboBox_Metro table td.rcbInputCell
+{
+    background-color: #000!important;
+}
+div.RadComboBox_Metro .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Metro .rcbArrowCellHidden.rcbArrowCellRight 
+{
+    border-width: 0 !important;
+}
+.RadComboBox_Metro .rcbHovered .rcbArrowCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbArrowCellHidden
+{
+    background-color: #000!important;
+}
+div.RadComboBox_Metro .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Metro .rcbArrowCellHidden.rcbArrowCellRight 
+{
+     border-width: 0 !important;
+}
+.RadComboBoxDropDown_Metro {
+    background-color: #000 !important;
+    border-color: #000 !important;
+    border-width: 0px !important;
+    border-style:none !important;
+}
+div.RadComboBoxDropDown_Metro .rcbHovered {
+    background-color: #ffc33f !important;
+    color: #000 !important;
+    padding: 1px 5px !important;
+    border: 0px none #000 !important;
+}
+.RadComboBoxDropDown
+{
+     border: 0px none #000 !important;
+}
+.RadComboBox table td.rcbInputCell, .RadComboBox .rcbInputCell .rcbInput {
+    padding-left: 0px !important;
+}
+	#content-wrapper{ 
+		width:100%; 
+		height:100%; 
+		position:absolute; 
+		top:0; 
+		overflow:auto; 
+		z-index:4; 
+		text-align:center; 
+	}
+	
+	/*Controls Section*/
+	#controls-wrapper{
+	    margin:0px auto;
+	    height:62px;
+	    width:100%;
+	    bottom:0;
+	    z-index: 5;
+	    background:url('images/nav-bg.png') repeat-x;
+	    position:absolute;
+	}
+	#controls{
+	    overflow: hidden;
+	    height: 100%;
+	    text-align:left;
+	    z-index: 5;
+	    padding:0 114px; /* Increase padding to give thumbnails room */
+	}
+	#slidecounter{
+	    float:left;
+	    color:#888;
+	    font:23px "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	    font-weight:bold;
+	    text-shadow: #000 0px -1px 0px;
+	    margin:19px 10px 18px 20px;	
+	}
+	#slidecaption{
+	    overflow: hidden;
+	    float:left;
+	    color:#FFF;
+	    font:16px "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	    font-weight:bold;
+	    text-shadow: #000 0px 2px 0px;
+	    margin:23px 20px 23px 0;
+	}
+	
+	/*Supersized Link*/
+	.stamp{ float: right; margin: 15px 30px 0 0;}
+	/*Supersize Plugin Styles*/
+	#navigation{
+	    float: right;
+	    margin:10px 20px 0 0;
+	}
+	#loading {
+	    position: absolute;
+	    top: 49.5%; 
+	    left: 49.5%;
+	    z-index: 10;
+	    width: 24px; 
+	    height: 24px;
+	    text-indent: -999em;
+	    background-image: url(images/progress.gif);
+	}
+	#supersized{
+	    position:fixed;
+	}
+	#supersized img{ -ms-interpolation-mode: bicubic; }
+	#supersized img, #supersized a{
+	    height:100%;
+	    width:100%;
+	    position:absolute;
+	    z-index: -1;
+	}
+	
+	#supersized .prevslide, #supersized .prevslide img{
+	    z-index: 1;
+	}
+	#supersized .activeslide, #supersized .activeslide img{
+	    z-index: 2;
+	}	
+	#nextthumb, #prevthumb
+	{ z-index:6; 
+	  display:none; 
+	  position:absolute;
+	   bottom:12px; 
+	   height:75px; 
+	   width:100px; 
+	   overflow:hidden; 
+	   border:2px solid #fff; 
+	   -webkit-box-shadow: 0px 0px 5px #000; 
+	   }
+#nextthumb{ right:12px; }
+#prevthumb{ left:12px; }
+#nextthumb img, #prevthumb img{ width:150px; }
+#nextthumb:active, #prevthumb:active{ bottom:10px; }		
+		/*Add hover pointer*/
+#controls > *:hover, #nextthumb:hover, #prevthumb:hover{ cursor:pointer; }
+ #Table3, #ctl00_cphWithoutScroll_CategoryEditID_pnlGalleryList
+{  -webkit-border-radius: 20px 20px 20px 20px  !important;
+    -moz-border-radius: 20px 20px 20px 20px !important;
+    border-radius: 20px 20px 20px 20px !important;
+    behavior: url(PIE.htc) !important;
+    border:2px solid #ffc33f !important;
+    padding:20px !important;
+    background-color:#fff !important;
+}
+     .formbutton1
+{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    text-transform: uppercase !important;
+    margin-top:10px !important;
+    margin-bottom:5px !important;
+    margin-right:20px !important;
+    -webkit-border-radius: 5px 5px 5px 5px !important;
+    -moz-border-radius: 5px 5px 5px 5px !important;
+    border-radius: 5px 5px 5px 5px !important;
+    behavior: url(PIE.htc) !important;
+    float:right !important;
+    background-color:#ffc33f;
+    color:black;
+    border-style:none;
+    font-size:10pt;  
+    padding-left:10px;
+    padding-right:10px;  
+    cursor: pointer;
+}
+.logintable
+{  -webkit-border-radius: 20px 20px 20px 20px  !important;
+    -moz-border-radius: 20px 20px 20px 20px !important;
+    border-radius: 20px 20px 20px 20px !important;
+    behavior: url(PIE.htc) !important;
+    border:2px solid #ffc33f !important;
+    padding:20px !important;
+    background-color:#fff !important;
+    height: 200px  !important;
+    width: 600px   !important;
+    margin-top:100px;
+    text-align:center;
+}
+
+.logintable input
+{
+    padding-left: 5px;
+}

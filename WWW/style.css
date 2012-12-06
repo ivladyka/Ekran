@@ -1,0 +1,816 @@
+/*
+Supersized - Fullscreen Slideshow jQuery Plugin Stylesheet Version 3.0
+By Sam Dunn (www.buildinternet.com // www.onemightyroar.com)
+Version: supersized.3.0.js
+Website: www.buildinternet.com/project/supersized
+*/
+@font-face {
+ font-family:OptimaCyr;
+ src: url('Fonts/GOTHIC.eot'); /* EOT file for IE */
+}
+@font-face {
+ font-family:OptimaCyr;
+ src: url('Fonts/GOTHIC.ttf'); /* TTF file for CSS3 browsers */
+}
+    body
+{
+}
+	*{
+	    margin:0;
+	    padding:0;
+   	}
+	a{	   
+	    text-decoration: none;
+	    outline: none;
+        color: #B1A9A9;
+	   
+	}
+	img{
+	    border:none;
+         margin:0;
+	    padding:0;
+	}
+ul
+{
+   list-style-image: url(Images/orangedisc.gif);
+}
+	/*Area to place content normally*/
+	#content-wrapper{ 
+		width:100%; 
+		height:100%; 
+		position:absolute; 
+		top:0; 
+		overflow:auto; 
+		z-index:4; 
+		text-align:center; 
+	}
+	
+	/*Controls Section*/
+	#controls-wrapper{
+	    margin:0px auto;
+	    height:62px;
+	    width:100%;
+	    bottom:0;
+	    z-index: 5;
+	    background:url('images/nav-bg.png') repeat-x;
+	    position:absolute;
+	}
+	#controls{
+	    overflow: hidden;
+	    height: 100%;
+	    text-align:left;
+	    z-index: 5;
+	    padding:0 114px; /* Increase padding to give thumbnails room */
+	}
+	#slidecounter{
+	    float:left;
+	    color:#888;
+	    font:23px "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	    font-weight:bold;
+	    text-shadow: #000 0px -1px 0px;
+	    margin:19px 10px 18px 20px;	
+	}
+	#slidecaption{
+	    overflow: hidden;
+	    float:left;
+	    color:#FFF;
+	    font:16px "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	    font-weight:bold;
+	    text-shadow: #000 0px 2px 0px;
+	    margin:23px 20px 23px 0;
+	}
+	
+body
+{
+    background: #490608 !important;
+    height: 100%;
+    background-image: url('Images/bodybg.png') !important;
+}
+img { border:none; }
+.formStyle
+{
+    overflow:hidden;    
+}
+
+#supersized-loader 
+{ 
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    z-index:0; 
+    width:60px; 
+    height:60px; 
+    margin:-30px 0 0 -30px; 
+    text-indent:-999em; 
+    background:url(Images/progress.gif) no-repeat center center;
+}
+
+#supersized
+{
+    margin: auto;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: -999;
+    height: 535px;
+    width: 1200px;
+    vertical-align:middle
+}
+
+#supersized img 
+{ 
+    width:auto; 
+    height:auto; 
+    position:relative; 
+    display:none; 
+    outline:none; 
+    border:none; 
+}
+
+#supersized.speed img 
+{ 
+    -ms-interpolation-mode:nearest-neighbor; 
+    image-rendering: -moz-crisp-edges; 
+}	/*Speed*/
+#supersized.quality img 
+{ 
+    -ms-interpolation-mode:bicubic; 
+    image-rendering: optimizeQuality; 
+}			/*Quality*/
+#supersized li
+    {
+        display: block;
+        list-style: none;
+        z-index: -30;
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+    height: 535px;
+    width: 1200px;
+    border: solid 2px #f0bc5e;
+    }
+
+#supersized a 
+{ 
+    width:100%; 
+    height:100%; 
+    display:block; 
+}
+#supersized li.prevslide 
+{ 
+    z-index:-20; 
+}
+
+#supersized li.activeslide 
+{ 
+    z-index:-10; 
+}
+
+#supersized li.image-loading 
+{ 
+    background:#111 url(Images/progress.gif) no-repeat center center; 
+    width:100%; 
+    height:100%; 
+}
+
+#supersized li.image-loading img
+{ 
+    visibility:hidden; 
+}
+
+#supersized li.prevslide img, #supersized li.activeslide img
+{ 
+    display:inline; 
+}
+	
+#footertext
+{
+    width: 1200px;
+    vertical-align: bottom;
+    position:relative;
+    bottom: 0px;
+    height: auto;
+    color: #b1a9a9;
+    margin-right: auto;
+    margin-left: auto;
+    float:none;
+    text-align:center
+}
+.FooterTextContent
+{
+    margin-top: 20px;
+    overflow: hidden;
+    display: block;
+    padding-left:40px;
+    padding-right:40px; 
+    padding-bottom:20px;
+    vertical-align: bottom
+}
+h3
+{
+    color: #ffc33f;
+    font-size: 12pt;
+    font-family: OptimaCyr;
+    font-weight: normal !important;
+    text-transform: uppercase;
+    font-weight:bold
+}
+#header
+{
+    margin: 0px auto;
+    width: 1200px;
+    height: 240px;
+    vertical-align: top;
+    vertical-align:middle;    
+    color: #ffc33f;
+    display: block;
+    float: none;
+    position:relative;
+}
+#header ul
+{
+    list-style-type: none;
+    list-style-image: none;
+    display: block;
+}
+#header ul li
+{
+    list-style-type: none;
+    list-style-image: none;
+    display: block;
+    float: left;
+    overflow:hidden;
+  }
+.topheaderdiv
+{
+    background-position: center top;
+    width: 100%;
+    background-image: url('Images/headerbg.png');
+    background-repeat: no-repeat;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -khtml-background-size: 100% 100%;
+    background-size: 100% 100%;
+    overflow:auto;
+    display: block;
+    min-height:300px;
+    height:45%;
+    top:0px;
+    text-align:center;
+    float:none;
+    margin: 0px auto;
+}
+#menu
+{     
+    vertical-align: top;
+    top: 0px;
+    color:#ffc33f;
+    overflow:hidden;
+    width:800px;
+    height:100px;
+ }
+.lilogo
+{
+    width:220px;
+}
+.limenu
+{
+      width:750px;
+      height:100px;
+}
+#logo
+{   
+    width: 210px;
+    height:240px;
+    vertical-align: top;
+    top: 0px;   
+}
+#logoyellow
+{
+    background-position: center bottom;
+    width: 210px;
+    height: 240px;
+    vertical-align: top;
+    position: absolute;
+    top: 0px;
+    background-image: url('Images/logo.png');
+    background-repeat: no-repeat;
+}
+#footer
+{ 
+    width: 100%;
+    height: 60px;
+    display:block;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0px;
+    color:#b1a9a9;
+    left:0px;
+    float:none;    
+   font-family: OptimaCyr !important; 
+}
+#footer div
+{ 
+    width:1200px;
+    text-align:center;   
+    display:block;
+    float:none;
+   font-family: OptimaCyr !important; 
+}
+#content
+{
+    background-position: center bottom;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    z-index: 9999;
+    bottom: 0px;
+    position: absolute;
+    background-image: url('Images/bottombg.png');
+        background-repeat: no-repeat;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -khtml-background-size: 100% 100%;
+    background-size: 100% 100%;
+    min-height:300px;
+    height:48%;
+    
+}
+#ctl00_FooterMenu_menuFooter
+{
+    text-align:center;
+}
+.TopMenuStyle
+{
+    width: auto;
+}
+ul.DunamicMenuStyle li
+{
+    overflow: hidden !important;
+    list-style: none !important;
+	display: inline !important;
+    text-align:left;
+    float:left;
+    background:rgba(76, 0, 1, 0.8);   
+    background: rgb(76, 0, 1) transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#884c0001, endColorstr=#884c0001);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#884c0001, endColorstr=#884c0001)";
+}
+
+ul.DunamicMenuStyle 
+{
+    overflow: hidden !important;
+    float: left ;  
+    margin-left: 0px !important;
+    background-image: url('Images/arrow.gif') !important;
+    background-repeat:no-repeat  !important;
+    background-position: 20px top  !important;
+    margin-top: 14px !important;
+    list-style: none !important;
+    width:max-content;
+    
+}
+#ctl00_TopMenu_mnTop ul.dynamic, ul.dynamic li
+{
+   overflow:hidden; 
+   z-index:10000 !important;
+   position:absolute;
+}
+
+.VIKKI_HiddenButton
+{
+	visibility: hidden;
+	display: none;
+	position: absolute;
+	left: -100px;
+}
+.VIKKI_HandCursor
+{
+    CURSOR: pointer;
+}
+#hoverNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 95%;
+	width: 98%;
+	z-index: 10;
+}
+#hoverNav a{ outline: none;}
+
+
+.VIKKI_PrevImageLink
+{
+	width: 49%;
+	height: 98%;
+	background: transparent url(Images/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	z-index: 1000;
+	left: 0; 
+	float: left;
+}
+
+.VIKKI_NextImageLink
+{
+	width: 49%;
+	height: 98%;
+	background: transparent url(Images/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	z-index: 1000;
+	right: 0; 
+	float: right; 
+}
+
+.VIKKI_PrevImageLink:hover {
+	 background: url(Images/prevlabel.gif) left 15% no-repeat;
+}
+
+.VIKKI_PrevImageLink:visited:hover {
+	 background: url(Images/prevlabel.gif) left 15% no-repeat;
+}
+
+.VIKKI_NextImageLink:hover {
+	 background: url(Images/nextlabel.gif) right 15% no-repeat;
+}
+
+.VIKKI_NextImageLink:visited:hover {
+	 background: url(Images/nextlabel.gif) right 15% no-repeat;
+}
+
+.VIKKI_ImageBackground
+{
+	background-color: White;
+}
+#languages
+{
+    width:36px;    
+    color: #ffc33f;
+    font-family: OptimaCyr;
+    font-weight: normal;
+    text-transform: uppercase;    
+    top:13px;
+    float: right;   
+    vertical-align:top;
+    position:absolute;
+    width:60px; 
+}
+.ctl00_ddLanguage_Arrow
+{
+    background-color: #000 !important;
+    background-image: url('Images/WebResource.png') !important;
+}
+#languages .RadComboBox .rcbReadOnly td.rcbArrowCell a
+{    background-color: #000 !important;
+    background-image: url('Images/WebResource.png') !important;
+}
+.RadComboBox_Metro .rcbFocused .rcbArrowCell, .RadComboBox_Metro .rcbFocused .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbFocused .rcbReadOnly .rcbArrowCellHidden 
+{
+    background-color: #000 !important;
+}
+div.RadComboBox_Metro .rcbFocused .rcbArrowCell, div.RadComboBox_Metro .rcbFocused .rcbInputCell 
+{
+     background-color: #000 !important;
+}
+RadComboBox_Metro, .RadComboBox_Metro .rcbInput, .RadComboBoxDropDown_Metro 
+{
+     color: #ffc33f !important;
+}
+div.RadComboBox_Metro table td.rcbInputCellLeft {
+    border-width:  0 !important;
+}
+.RadComboBox_Metro .rcbHovered .rcbArrowCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbArrowCellHidden 
+{
+   background-color: #000 !important;
+}
+div.RadComboBox_Metro .rcbHovered .rcbArrowCell, div.RadComboBox_Metro .rcbHovered .rcbInputCell 
+{
+  background-color: #000 !important;
+}
+div.RadComboBox_Metro table td.rcbInputCell
+{
+    background-color: #000!important;
+}
+div.RadComboBox_Metro .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Metro .rcbArrowCellHidden.rcbArrowCellRight 
+{
+    border-width: 0 !important;
+}
+.RadComboBox_Metro .rcbHovered .rcbArrowCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbArrowCellHidden
+{
+    background-color: #000!important;
+}
+div.RadComboBox_Metro .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Metro .rcbArrowCellHidden.rcbArrowCellRight 
+{
+     border-width: 0 !important;
+}
+.RadComboBoxDropDown_Metro {
+    background-color: #000 !important;
+    border-color: #000 !important;
+    border-width: 0px !important;
+    border-style:none !important;
+}
+div.RadComboBoxDropDown_Metro .rcbHovered {
+    background-color: #4c0001 !important;
+    color: #ffc33f !important;
+    padding: 1px 5px !important;
+    border: 0px none #000 !important;
+}
+#languages .RadComboBoxDropDown
+{
+     border: 0px none #000 !important;
+}
+#languages .RadComboBox table td.rcbInputCell, #languages .RadComboBox .rcbInputCell .rcbInput {
+    padding-left: 0px !important;
+}
+.formbutton
+{
+    padding: 5px 10px 5px 10px !important;
+    border-style: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 5px;   
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    behavior: url(PIE.htc);
+    float: right;
+    font-size: 10pt;
+    color: #000;
+    background-color: #ffc33f;
+    height: 30px !important;
+    cursor:pointer;
+    z-index:1000 !important;
+    position:relative;
+}
+#pnlBookingHome
+{
+    font-size:9pt;
+    margin:0px;
+    padding:0px;    
+}
+ .homepanel h4
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10pt;
+    text-transform: uppercase;
+    line-height: 28px;
+    font-weight:bold
+}
+ h4
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10pt;
+    text-transform: uppercase;
+    color: #FFC33F;
+    font-family: OptimaCyr;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+#footertext li.HomeBOOKING
+{   
+    margin-top: -5px;
+    margin-bottom: 0px;
+    padding-left:0px;
+    padding-right: 0px;
+    margin-right:0PX;
+    font-size:9pt;  
+}
+.homepanel ul, ul#ctl00_cphWithoutScroll_CategoryViewID_ulChildCategories
+{
+    list-style-type: none;
+    list-style-image: none;
+    overflow: hidden;
+    float: left;
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+}
+.homepanel ul li, ul#ctl00_cphWithoutScroll_CategoryViewID_ulChildCategories li
+{
+      list-style-type: none; 
+      list-style-image: none; 
+      overflow: hidden; 
+      float: left; 
+      display: inline;     
+     margin-left:15PX;
+     margin-right:10px;
+}
+    .homepanel ul li a
+    {
+        margin:0px !important;
+        padding:0px !important;
+        height:30px;
+          }
+     .homepanel ul li img
+    {
+        margin:0px !important;
+        padding:0px !important;
+        border: solid 2px #f0bc5e !important;
+    }
+#footertext div.homepanel
+{
+ 
+    padding-left:10px;
+    padding-right: 0px;
+}
+
+li.HomeBOOKING input, #tablebookingpage input, textarea, .contactbookingtable input
+{
+    border: 1px none #fff !important; 
+    -webkit-border-radius: 3px 3px 3px 3px !important;
+    -moz-border-radius: 3px 3px 3px 3px !important;
+    border-radius: 3px 3px 3px 3px !important;
+    behavior: url(PIE.htc);
+    margin-bottom:0px;
+    padding-left:5px;
+        z-index:1000 !important;
+    position:relative
+}
+
+li.HomeBOOKING select,  #tablebookingpage select,.contactbookingtable select
+{
+    border: 1px none #fff;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    behavior: url(PIE.htc);
+    margin-bottom:5px;
+    width:80px;
+    padding-left:5px
+}
+.locationtable td
+{
+    padding:5px;
+}
+.locationtable
+{
+    border: 0px;
+    margin-right: 10px;
+}
+#tablebookingpage span
+{
+    color:#ffc33f
+}
+.PriceRoomTitle
+{
+    color:#ffc33f;
+    text-transform: uppercase;
+    font-family: OptimaCyr;
+    font-size:10pt;
+}
+.PriceRoomstyle
+{
+    padding: 15px;
+    float: right;
+    margin: 0px;
+    background-color: #222;
+    
+}
+.subpagetitle
+{
+   background:rgba(0, 0, 0, 0.5);   
+   background: rgb(0, 0, 0) transparent;
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000);
+   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000)";
+    margin-top:0px;
+    z-index:+1000;
+    position:relative;
+    padding-left:10px;
+   height:30px;
+    padding-top:0px !important;
+    padding-bottom:0px !important;
+    margin-top:-30px;
+  }
+#ctl00_TopMenu_mnTop a.popout
+{
+    background-image: none !important;
+    text-shadow:1px 3px 1px #360507;
+}
+html body .RadInput_Black .riTextBox, html body .RadInputMgr_Black
+{
+     border-color: none !important;
+}
+
+.td-last
+{
+    width: 40px;
+}
+
+/* Thumbnail Tray
+	----------------------------*/			
+#thumb-tray
+{ 
+    z-index:3; 
+    bottom:0; 
+    height:150px; 
+    width:800px; 
+    overflow:hidden; 
+    text-align:center; 
+    bottom: 0px !important;
+    margin-top:0px;
+    margin-left:43px;
+}
+
+#thumb-back, #thumb-forward
+{ 
+    position:absolute; z-index:5; bottom:42px; height:108px; width:40px; 
+    
+}
+
+#thumb-back
+{ 
+    left:0; 
+    background: url('Images/thumb-back.gif') no-repeat center center;
+    margin-left:40px;
+}
+
+#thumb-forward
+{ 
+    right:0; 
+    background:url('Images/thumb-forward.gif') no-repeat center center;
+    margin-right:40px;
+}
+
+#thumb-back:hover, #thumb-forward:hover
+{ 
+    cursor:pointer; 
+ }				
+ul#thumb-list
+{ 
+    display:inline-block; 
+    list-style:none; 
+    position:relative; 
+    left:0px; 
+    padding:0 0px; 
+    margin-left:0px;
+    margin-top:15px
+}
+
+ul#thumb-list li
+{ 
+    list-style:none; 
+    display:inline; 
+    width:150px; 
+    height:108px; 
+    overflow:hidden; 
+    float:left; 
+    margin:0; 
+}
+
+ul#thumb-list li img 
+{ 
+    width:200px; 
+    height:auto; 
+    opacity:0.5; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; 
+    filter:alpha(opacity=60); 
+    -webkit-transition: all 100ms ease-in-out; 
+    -moz-transition: all 100ms ease-in-out; 
+    -o-transition: all 100ms ease-in-out; 
+    -ms-transition: all 100ms ease-in-out; 
+    transition: all 100ms ease-in-out; 
+    padding:10px;
+}
+
+ul#thumb-list li.current-thumb img, 
+ul#thumb-list li:hover img
+{ 
+    opacity:1; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; 
+    filter:alpha(opacity=100); 
+}
+				
+ul#thumb-list li:hover
+{ 
+    cursor:pointer; 
+}
+.formStyle
+{
+   overflow: hidden !important;}
+.homedropdown
+{
+    height:22px !important;
+    -webkit-border-radius: 5px 5px 5px 5px !important;
+    -moz-border-radius: 5px 5px 5px 5px !important;
+    border-radius: 5px 5px 5px 5px !important;
+    behavior: url(PIE.htc);
+}
+#ctl00_cphWithoutScroll_CategoryViewID_lbError1, #ctl00_cphWithoutScroll_CategoryViewID_lbError
+{
+    color:#ffc33f  !important;
+    font-family:AGOptimaCyr  !important;
+    font-weight: normal;
+    font-size:14pt; 
+}
+#ctl00_TopMenu_mnTop_SkipLink
+{
+    display: none;
+}
+.riDisplay
+{
+    z-index: 10000 !important;
+    position: relative; color: #000 !important;
+
+}

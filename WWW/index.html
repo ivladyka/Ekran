@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US"> 
+<head>
+<meta charset="UTF-8" />
+<title>Slideshowify</title>
+<style type="text/css">
+	img   {display:none;} /* just 'cause */
+</style>
+</head>
+
+<body style="background-color:#000">
+
+<!-- a bunch of random images -->
+<img src="Images/1.jpg"/> 	
+<div id="imgContainer">
+	<img src="Images/2.jpg"/>
+	<img src="Images/3.jpg"/>
+</div>
+<!-- jquery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<!-- slideshowify plugin -->
+<script type="text/javascript" src="js/jquery.slideshowify.js"></script>
+<script type="text/javascript"> $("img").slideshowify(); </script>
+
+</body>
+</html>
