@@ -15,12 +15,6 @@
         }
     }
 
-    function VIKKI_CheckInDateSelected2(sender, e) {
-        if (e.get_newDate() != null) {
-            VIKKI_SetDataPicketValue($find("<%= dpCheckOutDate2.DatePickerClientID %>"), e.get_newDate());
-        }
-    }
-
     function VIKKI_SetDataPicketValue(datePicker, date) {
         date.setDate(date.getDate() + 1); 
         datePicker.set_selectedDate(date); 
@@ -36,56 +30,6 @@
                        <ul id="ulChildCategories" runat="server">
                        </ul>
                    </li>
-                    <li style="list-style-type: none; list-style-image: none; overflow: hidden; float: left; padding-left:50px;" >                 
-              <asp:Panel ID="pnlContactpage" runat="server" Visible="false" Width="240px">
-              <table border="0" style="width:170PX" class="contactbookingtable">
-              <tr>
-                  <td colspan="3"><%=CheckInRes%></td>
-              </tr>
-              <tr>
-                  <td colspan="3"> 
-                    <uc1:DatePicker id="dpCheckInDate2" runat="server" IsRequire="true" Width="170" ValidationGroup="HomeBOOKING" OnClientDateSelected="VIKKI_CheckInDateSelected2"></uc1:DatePicker>
-                   </td>
-              </tr>
-                <tr>
-                  <td colspan="3"><%=CheckOutRes%></td>
-              </tr>
-                 <tr>
-                  <td colspan="3">
-                    <uc1:DatePicker id="dpCheckOutDate2" runat="server" IsRequire="true" Width="170" ValidationGroup="HomeBOOKING"></uc1:DatePicker>
-                    </td>
-                    </tr> 
-                    <tr>
-                  <td colspan="3">  
-                    <asp:Label ID="Label5" runat="server" Visible="False" ForeColor="Red" Text="<%$Resources:Vikkisoft, DateCompareError %>"></asp:Label>
-                  </td>
-              </tr>                
-                 <tr>
-                  <td style="width:33%; text-align:center"><%=RoomsRes%></td>
-                  <td style="width:33%; text-align:center"><%=AdultsRes%></td>
-                  <td style="width:33%; text-align:center"><%=ChildrenRes%></td>
-              </tr>
-              <tr>
-                  <td style="padding-left: 0px;">
-                      <telerik:RadComboBox ID="ddlRooms2" runat="server" Width="50px"  EnableLoadOnDemand="false" CssClass="homedropdown">
-                      </telerik:RadComboBox> 
-                  </td>
-                  <td style="padding-left: 0px;">
-                    <telerik:RadComboBox ID="ddlAdults2" runat="server" Width="50px" EnableLoadOnDemand="false" CssClass="homedropdown">
-                       </telerik:RadComboBox></td>
-                  <td style="padding: 0px;">
-                      <telerik:RadComboBox ID="ddlChildren2" runat="server" Width="50px"  EnableLoadOnDemand="false" CssClass="homedropdown">                       
-                      </telerik:RadComboBox>
-                  </td>
-              </tr>
-                 <tr>
-                  <td colspan="3" style="padding-right:5px; padding-top:5px;"> 
-                      <asp:Button ID="btnBookNow2" runat="server" OnClick="btnBookNow2_Click" Text="<%$Resources:Vikkisoft, BookNow %>" ValidationGroup="HomeBOOKING" CssClass="formbutton" Width="160px" />
-                  </td>
-              </tr>
-          </table>
-                  </asp:Panel>
-                    </li>
                </ul>  
                 </asp:Panel>
          <asp:Panel ID="pnlBooking" runat="server" Visible="false">
@@ -173,8 +117,8 @@
           </table>
 </asp:Panel>        
         <div >
- <asp:Panel ID="pnlBookingHome" runat="server" Visible="false" CssClass="homepanel">
-             <ul>
+        <asp:Panel ID="pnlHomeSection" runat="server" Visible="false" CssClass="homepanel">
+            <ul>
         <li id="liAbourUS" runat="server" style="width:200px;">
             <a href="Default.aspx?content=CategoryView&CategoryID=28">
                 <asp:Image ID="Image1" runat="server"  ImageUrl="~/Images/WEBSite/b914a224-8e63-4197-bf86-906b5364e9e5_s.jpg"/>
@@ -200,55 +144,7 @@
                 </div>
                </a>
       </li>
-      <li class="HomeBOOKING">   
-          <table border="0" style="width:170PX" >
-              <tr>
-                  <td colspan="3" style="padding-top:2px;"><%=CheckInRes%></td>
-              </tr>
-              <tr>
-                  <td colspan="3"> 
-                    <uc1:DatePicker id="dpCheckInDate" runat="server" IsRequire="true" Width="170" ValidationGroup="HomeBOOKING" OnClientDateSelected="VIKKI_CheckInDateSelected"></uc1:DatePicker>
-                   </td>
-              </tr>
-                <tr>
-                  <td colspan="3"><%=CheckOutRes%></td>
-              </tr>
-                 <tr>
-                  <td colspan="3">
-                    <uc1:DatePicker id="dpCheckOutDate" runat="server" IsRequire="true" Width="170" ValidationGroup="HomeBOOKING"></uc1:DatePicker>
-                    </td>
-                    </tr> 
-                    <tr>
-                  <td colspan="3">  
-                    <asp:Label ID="dateCompare" runat="server" Visible="False" ForeColor="Red" Text="<%$Resources:Vikkisoft, DateCompareError %>"></asp:Label>
-                  </td>
-              </tr>                
-                 <tr>
-                  <td style="width:33%; text-align:center"><%=RoomsRes%></td>
-                  <td style="width:33%; text-align:center"><%=AdultsRes%></td>
-                  <td style="width:33%; text-align:center"><%=ChildrenRes%></td>
-              </tr>
-              <tr>
-                  <td style="padding-left: 0px;">
-                      <telerik:RadComboBox ID="ddlRooms" runat="server" Width="50px"  EnableLoadOnDemand="false" CssClass="homedropdown">
-                      </telerik:RadComboBox> 
-                  </td>
-                  <td style="padding-left: 0px;">
-                    <telerik:RadComboBox ID="ddlAdults" runat="server" Width="50px" EnableLoadOnDemand="false" CssClass="homedropdown">
-                       </telerik:RadComboBox></td>
-                  <td style="padding: 0px;">
-                      <telerik:RadComboBox ID="ddlChildren" runat="server" Width="50px"  EnableLoadOnDemand="false" CssClass="homedropdown">                       
-                      </telerik:RadComboBox>
-                  </td>
-              </tr>
-                 <tr>
-                  <td colspan="3" style="padding-right:5px; padding-top:5px;"> 
-                      <asp:Button ID="btnBookNow" runat="server" OnClick="btnBookNow_Click" Text="<%$Resources:Vikkisoft, BookNow %>" ValidationGroup="HomeBOOKING" CssClass="formbutton" Width="160px" />
-                  </td>
-              </tr>
-          </table>
-    </li>
-  </ul>
+      </ul>
          </asp:Panel>
         <asp:Panel ID="pnlGallery" runat="server" Visible="false">
         <div id="thumb-tray" class="load-item">
@@ -323,3 +219,46 @@
         </asp:Panel>        
 
 </div> 
+<asp:Panel ID="pnlBookingHome" runat="server" Visible="false" CssClass="HomeBOOKING">
+          <table border="0" style="width:170PX" >
+              <tr>
+                  <td style="padding-top:2px;"><%=CheckInRes%></td>
+                  <td style="width:33%; text-align:center"><%=RoomsRes%></td>
+                  <td style="width:33%; text-align:center"><%=AdultsRes%></td>
+                  <td style="text-align:center"><%=ChildrenRes%></td>
+              </tr>
+              <tr>
+                  <td> 
+                    <uc1:DatePicker id="dpCheckInDate" runat="server" IsRequire="true" Width="170" ValidationGroup="HomeBOOKING" OnClientDateSelected="VIKKI_CheckInDateSelected"></uc1:DatePicker>
+                  </td>
+                  <td style="padding-left: 0px;">
+                      <telerik:RadComboBox ID="ddlRooms" runat="server" Width="50px"  EnableLoadOnDemand="false" CssClass="homedropdown">
+                      </telerik:RadComboBox> 
+                  </td>
+                  <td style="padding-left: 0px;">
+                    <telerik:RadComboBox ID="ddlAdults" runat="server" Width="50px" EnableLoadOnDemand="false" CssClass="homedropdown">
+                       </telerik:RadComboBox></td>
+                  <td style="padding: 0px;">
+                      <telerik:RadComboBox ID="ddlChildren" runat="server" Width="50px"  EnableLoadOnDemand="false" CssClass="homedropdown">                       
+                      </telerik:RadComboBox>
+                  </td>
+              </tr>
+              <tr>
+                  <td><%=CheckOutRes%></td>
+                  <td colspan="3" rowspan="2">
+                    <asp:Button ID="btnBookNow" runat="server" OnClick="btnBookNow_Click" Text="<%$Resources:Vikkisoft, BookNow %>" ValidationGroup="HomeBOOKING" CssClass="formbutton" Width="160px" />
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <uc1:DatePicker id="dpCheckOutDate" runat="server" IsRequire="true" Width="170" ValidationGroup="HomeBOOKING"></uc1:DatePicker>
+                  </td>
+              </tr> 
+              <tr>
+                  <td>  
+                    <asp:Label ID="dateCompare" runat="server" Visible="False" ForeColor="Red" Text="<%$Resources:Vikkisoft, DateCompareError %>"></asp:Label>
+                  </td>
+                  <td colspan="3"></td>
+              </tr>                
+          </table>
+</asp:Panel>

@@ -22,13 +22,12 @@ public partial class CategoryView : ControlBase
         {
             case 1:
                 pnlBookingHome.Visible = true;
+                pnlHomeSection.Visible = true;
                  dpCheckInDate.MinDate = DateTime.Now;
                 dpCheckOutDate.MinDate = DateTime.Now;
                 break;
             case 23:
-                pnlContactpage.Visible = true;
-                dpCheckInDate2.MinDate = DateTime.Now;
-                dpCheckOutDate2.MinDate = DateTime.Now;
+                pnlBookingHome.Visible = true;
                 break;
             case 3:
                 pnlGallery.Visible = true;
@@ -242,9 +241,6 @@ public partial class CategoryView : ControlBase
         LoadNumberDDL(ddlRooms1, 1, 6);
         LoadNumberDDL(ddlAdults1, 1, 4);
         LoadNumberDDL(ddlChildren1, 0, 3);
-        LoadNumberDDL(ddlRooms2, 1, 6);
-        LoadNumberDDL(ddlAdults2, 1, 4);
-        LoadNumberDDL(ddlChildren2, 0, 3);
         ddlRoomPrices.Items.Clear();
         ddlRoomPrices.Items.Add(new RadComboBoxItem("", "0"));
         Room r = new Room();
@@ -273,12 +269,7 @@ public partial class CategoryView : ControlBase
     protected void btnBookNow_Click(object sender, EventArgs e)
     {
         SaveBookingDataAndRedirect(dpCheckInDate, dpCheckOutDate, ddlRooms, ddlAdults, ddlChildren);
-    }
-
-    protected void btnBookNow2_Click(object sender, EventArgs e)
-    {
-        SaveBookingDataAndRedirect(dpCheckInDate2, dpCheckOutDate2, ddlRooms2, ddlAdults2, ddlChildren2);
-    }
+    }    
 
     private void SaveBookingDataAndRedirect(DatePicker dpCheckIn, DatePicker dpCheckOut, RadComboBox ddlRoom,
         RadComboBox ddlAdult, RadComboBox ddlChild)

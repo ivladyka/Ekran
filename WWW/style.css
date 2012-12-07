@@ -204,7 +204,8 @@ img { border:none; }
     padding-left:40px;
     padding-right:40px; 
     padding-bottom:20px;
-    vertical-align: bottom
+    vertical-align: bottom;
+    float: right;
 }
 h3
 {
@@ -567,13 +568,15 @@ div.RadComboBoxDropDown_Metro .rcbHovered {
     padding-top:0px;
     padding-bottom:0px;
 }
-#footertext li.HomeBOOKING
+#footertext .HomeBOOKING
 {   
-    margin-top: -5px;
+    /*margin-top: -5px;
     margin-bottom: 0px;
     padding-left:0px;
     padding-right: 0px;
-    margin-right:0PX;
+    margin-right:0PX;*/
+    position: absolute;
+    bottom: 0px;
     font-size:9pt;  
 }
 .homepanel ul, ul#ctl00_cphWithoutScroll_CategoryViewID_ulChildCategories
@@ -611,12 +614,12 @@ div.RadComboBoxDropDown_Metro .rcbHovered {
     }
 #footertext div.homepanel
 {
- 
     padding-left:10px;
     padding-right: 0px;
+    float: right;
 }
 
-li.HomeBOOKING input, #tablebookingpage input, textarea, .contactbookingtable input
+.HomeBOOKING input, #tablebookingpage input, textarea, .contactbookingtable input
 {
     border: 1px none #fff !important; 
     -webkit-border-radius: 3px 3px 3px 3px !important;
@@ -629,7 +632,7 @@ li.HomeBOOKING input, #tablebookingpage input, textarea, .contactbookingtable in
     position:relative
 }
 
-li.HomeBOOKING select,  #tablebookingpage select,.contactbookingtable select
+.HomeBOOKING select,  #tablebookingpage select,.contactbookingtable select
 {
     border: 1px none #fff;
     -webkit-border-radius: 3px 3px 3px 3px;
