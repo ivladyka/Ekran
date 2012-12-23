@@ -23,14 +23,18 @@ public partial class CategoryView : ControlBase
             case 1:
                 pnlBookingHome.Visible = true;
                 pnlHomeSection.Visible = true;
-                 dpCheckInDate.MinDate = DateTime.Now;
+                dpCheckInDate.MinDate = DateTime.Now;
                 dpCheckOutDate.MinDate = DateTime.Now;
+                pnlCategoryContent.Visible = false;
                 break;
             case 23:
+                pnlCategoryContent.Visible = false;
                 pnlBookingHome.Visible = true;
                 break;
             case 3:
                 pnlGallery.Visible = true;
+                pnlCategoryContent.CssClass = "CategoryContentGallery";
+                pnlFooterContentBlock.CssClass = "FooterContentBlockstylegallery";
                 break;
             case 27:
                 pnlBooking.Visible = true;
@@ -38,8 +42,15 @@ public partial class CategoryView : ControlBase
                 break;
             case 24:
                 pnlContactUS.Visible = true;
+                pnlCategoryContent.CssClass = "CategoryContentContactUS";
+                pnlContactUS.CssClass = "ContactUSpanel";
+                pnlFooterContentBlock.CssClass = "FooterContentBlockContactUSpage";
                 break;
 
+        }
+        if (CategoryID == 1 || CategoryID == 2 || CategoryID == 18 || CategoryID == 7 || CategoryID == 23 || CategoryID == 12)
+        {
+            pnlFooterContentBlock.CssClass = "FooterContentBlockstyle";
         }
     }
     private void LoadCategory()
@@ -200,11 +211,11 @@ public partial class CategoryView : ControlBase
                                     System.Web.UI.WebControls.Image image = new System.Web.UI.WebControls.Image();
                                     if (item.ChildItems.Count == 4)
                                     {
-                                        image.Width = Unit.Pixel(190);
+                                        image.Width = Unit.Pixel(180);
                                     }
                                     else
                                     {
-                                        image.Width = Unit.Pixel(262);
+                                        image.Width = Unit.Pixel(180);
                                     }
                                     image.ImageUrl = Path.Combine(Utils.GaleryImagePath, g.s_PhotoName.Substring(0, g.s_PhotoName.ToString().Length - 4) + "_s.jpg");
                                     hl.Controls.Add(image);

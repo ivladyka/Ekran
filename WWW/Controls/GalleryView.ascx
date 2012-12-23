@@ -5,7 +5,7 @@
 <script language="javascript">
     Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
     $("#<%=gallery.ClientID%>").galleria({
-        width: 700,
+        width: 900,
         height: 620,
         autoplay: 5000,
         showImagenav: false,

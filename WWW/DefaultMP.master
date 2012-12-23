@@ -54,18 +54,22 @@
            <ul>
              <li class="lilogo">
               <div id="logo"></div>
-              <a href="Default.aspx"><div id="logoyellow"></div></a>
+              <a href="Default.aspx">
+                  <div class="yellowshadow"></div>
+                  <div class="yellowshadow"></div>
+                  <div class="yellowshadow"></div>
+                  <div id="logoyellow"></div>
+                 
+              </a>
               </li>
               <li class="limenu">
                 <div id="menu">      
-                  <uc1:TopMenu id="TopMenu" runat="server"></uc1:TopMenu>  
-            
-        
+                  <uc1:TopMenu id="TopMenu" runat="server"></uc1:TopMenu> 
                 </div>
                 </li>
-               <li>
+               <li class="lilanguages">
                 <div id="languages">
-                        <telerik:RadComboBox id="ddLanguage" runat="server" Width="40px" EnableLoadOnDemand="false" AutoPostBack="true" OnClientSelectedIndexChanged="VIIKILanguageChanged" BackColor="black" OnSelectedIndexChanged="ddLanguage_SelectedIndexChanged" ForeColor="#ffc33f" Skin="Metro" OpenDropDownOnLoad="False">
+                        <telerik:RadComboBox id="ddLanguage" runat="server" Width="40px" EnableLoadOnDemand="false" AutoPostBack="true" OnClientSelectedIndexChanged="VIIKILanguageChanged" OnSelectedIndexChanged="ddLanguage_SelectedIndexChanged" ForeColor="#ffc33f" Skin="Black" OpenDropDownOnLoad="False" BackColor="#480B05" BorderColor="#480B05" BorderStyle="none" BorderWidth="0px">
                             <Items>
                                 <telerik:RadComboBoxItem Value="UA" Text="UA" />
                                 <telerik:RadComboBoxItem Value="ENG" Text="ENG" />
@@ -77,6 +81,9 @@
             </ul>
     </div>  
     </div>
+    <div class="bottomblock">
+
+   
     <div id="content">	
     <!--Slides-->
             <div id="footertext">
@@ -84,7 +91,7 @@
                  <asp:ContentPlaceHolder id="cphWithoutScroll" runat="server">        
                  </asp:ContentPlaceHolder>
             </div>   
-    </div>
+    </div> </div>
 </div>
  </form>   
  </body>   

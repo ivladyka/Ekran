@@ -1,4 +1,4 @@
-/*
+﻿/*
 Supersized - Fullscreen Slideshow jQuery Plugin Stylesheet Version 3.0
 By Sam Dunn (www.buildinternet.com // www.onemightyroar.com)
 Version: supersized.3.0.js
@@ -14,6 +14,8 @@ Website: www.buildinternet.com/project/supersized
 }
     body
 {
+  
+
 }
 	*{
 	    margin:0;
@@ -37,12 +39,11 @@ ul
 	/*Area to place content normally*/
 	#content-wrapper{ 
 		width:100%; 
-		height:100%; 
+		height:100%;         
 		position:absolute; 
 		top:0; 
 		overflow:auto; 
 		z-index:4; 
-		text-align:center; 
 	}
 	
 	/*Controls Section*/
@@ -83,7 +84,7 @@ ul
 body
 {
     background: #490608 !important;
-    height: 100%;
+    height: 100% !important;    
     background-image: url('Images/bodybg.png') !important;
 }
 img { border:none; }
@@ -104,19 +105,19 @@ img { border:none; }
     text-indent:-999em; 
     background:url(Images/progress.gif) no-repeat center center;
 }
-
 #supersized
 {
-    margin: auto;
-    display: block;
-    position: relative;
-    overflow: hidden;
+ 
     z-index: -999;
-    height: 535px;
+    height: 500px;
     width: 1200px;
-    vertical-align:middle
+    vertical-align: middle;
+    text-align: center;
+      top: 40%;
+    left: 50%;
+    margin: -250px 0 0 -600px;
+     position: absolute;
 }
-
 #supersized img 
 { 
     width:auto; 
@@ -126,7 +127,6 @@ img { border:none; }
     outline:none; 
     border:none; 
 }
-
 #supersized.speed img 
 { 
     -ms-interpolation-mode:nearest-neighbor; 
@@ -139,17 +139,18 @@ img { border:none; }
 }			/*Quality*/
 #supersized li
     {
-        display: block;
-        list-style: none;
-        z-index: -30;
-        position: fixed;
-        overflow: hidden;
-        top: 0;
-    height: 535px;
-    width: 1200px;
+    display: block;
+    list-style: none;
+    z-index: -30;
+    position: fixed;
+    overflow: hidden;
+     top: 41.5%;
+    left: 50%;
+    margin: -250px 0 0 -600px;
     border: solid 2px #f0bc5e;
-    }
-
+        height: 496px;
+    width: 1196px;
+}
 #supersized a 
 { 
     width:100%; 
@@ -160,52 +161,206 @@ img { border:none; }
 { 
     z-index:-20; 
 }
-
 #supersized li.activeslide 
 { 
     z-index:-10; 
 }
-
 #supersized li.image-loading 
 { 
     background:#111 url(Images/progress.gif) no-repeat center center; 
     width:100%; 
     height:100%; 
 }
-
 #supersized li.image-loading img
 { 
     visibility:hidden; 
 }
-
 #supersized li.prevslide img, #supersized li.activeslide img
 { 
     display:inline; 
 }
-	
-#footertext
+.yellowshadow
 {
-    width: 1200px;
-    vertical-align: bottom;
-    position:relative;
-    bottom: 0px;
-    height: auto;
-    color: #b1a9a9;
-    margin-right: auto;
-    margin-left: auto;
-    float:none;
-    text-align:center
+    width: 180px;
+    height: 150px;   
+-webkit-box-shadow: 10 0 150px rgba(252, 202, 101, .9);
+-moz-box-shadow:0 0 150px rgba(252, 202, 101, .9);
+box-shadow: 0 0 150px rgba(252, 202, 101, .9); 
+behavior: url(PIE.htc);
+position: absolute;
+ vertical-align: top;
+ top:0px;
+         position:absolute;
+    left:0px; 
+z-index:99;
+ margin-left: 20px; 
+}
+.yellowshadow1
+{
+width: 600px;
+height: 100px;
+-webkit-box-shadow: 10 0 150px rgba(252, 202, 101, 1.0);
+-moz-box-shadow:0 0 150px rgba(252, 202, 101, 1.0);
+box-shadow: 0 0 150px rgba(252, 202, 101, 1.0); 
+behavior: url(PIE.htc);
+position: absolute;
+ vertical-align: top;
+ top:0px;
+z-index:99;
+ margin-left: 20px;
+ float:right;
+ background-color: rgba(252, 202, 101, .9);
+ 
 }
 .FooterTextContent
 {
-    margin-top: 20px;
-    overflow: hidden;
+    margin: 0px auto 0px auto;   
     display: block;
-    padding-left:40px;
-    padding-right:40px; 
-    padding-bottom:20px;
+    padding-left: 20px;
+    padding-right: 0px;    
     vertical-align: bottom;
-    float: right;
+    bottom: 0px !important;  
+    min-height: 60%;
+    max-height: 90%;
+    text-align: left;
+    position:absolute;
+    width:1170px;
+}
+.FooterContentBlock ul
+{
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: inside;
+    display: block;
+}
+.FooterContentBlock ul li
+{
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: inside;
+    display: block;
+}
+.FooterContentBlock
+{
+    background: #3d0303;
+    margin: 0px auto 20px auto;
+    display: block;
+    position: absolute;
+    vertical-align: bottom;
+    bottom: 0px !important;
+    margin: 20px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 0px;
+    behavior: url(PIE.htc);
+    border-color: #3d0303;
+    overflow: visible;
+    min-height:130px;
+    padding:0px
+}
+.FooterContentBlockstyle
+{
+
+    margin: 0px auto 20px auto;
+    display: block;
+    position: absolute;
+    vertical-align: bottom;
+    bottom: 0px !important;     
+    overflow: visible;
+    min-height:62%;
+}
+.FooterContentBlockstylegallery
+{
+    
+    margin: 0px auto 20px auto;
+    display: block;
+    position: absolute;
+    vertical-align: bottom;
+    bottom: 0px !important;     
+    overflow: visible;
+    min-height:80%;
+}
+.categoryName
+{ display: block;
+  padding:20PX;
+}
+.Bookingpanel, #tablebookingpage
+{
+    z-index:9999;
+    float:left;
+    display:block;
+    overflow: visible;    
+    margin-top:-20px;
+}
+.PriceRoomstyle
+{
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius:  10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 0px;
+    behavior: url(PIE.htc);
+    border-color: #3d0303;
+    margin:20px;     
+    background: #3d0303;
+    position:absolute;
+    bottom: 0px !important;      
+    right:0px;
+}
+.Bookingpanel
+{ 
+    float:left;      
+     vertical-align:bottom !important;  
+     bottom: 0px !important  ;
+    display: block;  
+     margin: 0 auto ;
+     padding-bottom:20px;
+     bottom: 0px !important;  
+     width:1000px;
+}
+    .Bookingpanel span
+    {
+      
+    }
+.Bookingpanel #tablebookingpage .inputstyle, .Bookingpanel #tablebookingpage #ctl00_cphWithoutScroll_CategoryViewID_ddlRoomPrices, #ctl00_cphWithoutScroll_CategoryViewID_btnBookNow1
+{
+ margin-right:10px;
+ 
+}
+.FooterTextContent span
+{      
+       text-align:left;
+       display:block;
+}
+.Bookingpanel table tr td
+{
+     text-align:left  !important;
+     vertical-align:top  !important;
+}
+.FooterTextContent h3
+{
+        text-align:left  !important;
+        vertical-align:bottom;
+}
+.FooterTextContent ul
+{
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: inside;
+}
+.FooterTextContent ul li
+{
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: inside;
+    display: list-item;
+    overflow:visible
+}
+.bookbutton
+{
+    vertical-align:bottom;
 }
 h3
 {
@@ -214,7 +369,8 @@ h3
     font-family: OptimaCyr;
     font-weight: normal !important;
     text-transform: uppercase;
-    font-weight:bold
+    font-weight:bold !important;
+   text-shadow:1px 3px 1px #360507;
 }
 #header
 {
@@ -240,21 +396,23 @@ h3
     list-style-image: none;
     display: block;
     float: left;
-    overflow:hidden;
+    overflow:visible;
   }
 .topheaderdiv
 {
     background-position: center top;
-    width: 100%;
+    width: 100%;    
     background-image: url('Images/headerbg.png');
     background-repeat: no-repeat;
     -o-background-size: 100% 100%;
     -webkit-background-size: 100% 100%;
     -khtml-background-size: 100% 100%;
     background-size: 100% 100%;
+  behavior: url(PIE.htc);
     overflow:auto;
     display: block;
     min-height:300px;
+    min-width:1200px;
     height:45%;
     top:0px;
     text-align:center;
@@ -269,22 +427,35 @@ h3
     overflow:hidden;
     width:800px;
     height:100px;
+    position:relative
  }
 .lilogo
 {
     width:220px;
 }
+.lilogo a
+{
+   display:block
+}
 .limenu
 {
       width:750px;
       height:100px;
+      left:230px;
+      position:absolute;
+}
+.lilanguages
+{    left:970px;
+      position:absolute;
 }
 #logo
 {   
     width: 210px;
     height:240px;
     vertical-align: top;
-    top: 0px;   
+    top: 0px;  
+    position:absolute;
+    left:0px; 
 }
 #logoyellow
 {
@@ -296,6 +467,13 @@ h3
     top: 0px;
     background-image: url('Images/logo.png');
     background-repeat: no-repeat;
+    z-index:9000;
+        position:absolute;
+    left:0px; 
+}
+#logoyellow:hover
+{
+    background-image: url('Images/logo1.png');
 }
 #footer
 { 
@@ -318,24 +496,37 @@ h3
     float:none;
    font-family: OptimaCyr !important; 
 }
-#content
+.bottomblock
 {
-    background-position: center bottom;
-    width: 100%;
-    margin: 0px auto;
-    text-align: center;
-    z-index: 9999;
-    bottom: 0px;
     position: absolute;
-    background-image: url('Images/bottombg.png');
-        background-repeat: no-repeat;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    -khtml-background-size: 100% 100%;
-    background-size: 100% 100%;
-    min-height:300px;
-    height:48%;
-    
+    bottom: 0px;
+    width: 100%;
+    min-height: 300px;
+    height: 48%;
+    float: none;
+    display:block;
+    overflow:hidden
+}
+#content
+{ background-image: url('Images/bottombg.png');
+    background-position:center bottom;
+    background-repeat: no-repeat;
+  -o-background-size: 100% 100%; /* opera ≥ 9.5 */
+    -webkit-background-size: 100% 100%; /* Safari ≥ 5.0, Chrome ≥ 4.0 */
+    -khtml-background-size: 100% 100%; /* Konqueror ≥ 3.5.4 */
+    -moz-background-size: 100% 100%; /* Firefox ≥ 3.6 */
+    background-size: 100% 100%; /* браузеры с поддержкой CSS3: FF ≥ 4, Opera ≥ 10.53, IE ≥*/        
+    display:block;
+    float:none;
+   height:100%;
+   margin: 0px auto;
+    width: 100%;
+    min-width:1200px;
+   overflow: auto; 
+    z-index: 9999;
+    margin-right: auto;
+    margin-left: auto;
+ behavior: url(PIE.htc);
 }
 #ctl00_FooterMenu_menuFooter
 {
@@ -352,12 +543,24 @@ ul.DunamicMenuStyle li
 	display: inline !important;
     text-align:left;
     float:left;
-    background:rgba(76, 0, 1, 0.8);   
+    background:rgba(76, 0, 1, 1);   
     background: rgb(76, 0, 1) transparent;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#884c0001, endColorstr=#884c0001);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#884c0001, endColorstr=#884c0001)";
-}
 
+}
+ul.DunamicMenuStyle li:first-child
+{    border-radius: 10px 0px 0px 10px;
+    -moz-border-radius:  10px 0px 0px 10px;
+    -webkit-border-radius: 10px 0px 0px 10px;
+     behavior: url(PIE.htc);
+}
+ul.DunamicMenuStyle li:last-child
+{    border-radius: 0px 10px 10px 0px;
+    -moz-border-radius:  0px 10px 10px 0px;
+    -webkit-border-radius: 0px 10px 10px 0px;
+     behavior: url(PIE.htc);
+}
 ul.DunamicMenuStyle 
 {
     overflow: hidden !important;
@@ -461,29 +664,29 @@ ul.DunamicMenuStyle
     background-image: url('Images/WebResource.png') !important;
 }
 #languages .RadComboBox .rcbReadOnly td.rcbArrowCell a
-{    background-color: #000 !important;
+{    background-color: #450904 !important;
     background-image: url('Images/WebResource.png') !important;
 }
-.RadComboBox_Metro .rcbFocused .rcbArrowCell, .RadComboBox_Metro .rcbFocused .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbFocused .rcbReadOnly .rcbArrowCellHidden 
+.RadComboBox_Black .rcbFocused .rcbArrowCell, .RadComboBox_Black .rcbFocused .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbFocused .rcbReadOnly .rcbArrowCellHidden 
 {
     background-color: #000 !important;
 }
-div.RadComboBox_Metro .rcbFocused .rcbArrowCell, div.RadComboBox_Metro .rcbFocused .rcbInputCell 
+div.RadComboBox_Black .rcbFocused .rcbArrowCell, div.RadComboBox_Black .rcbFocused .rcbInputCell 
 {
      background-color: #000 !important;
 }
-RadComboBox_Metro, .RadComboBox_Metro .rcbInput, .RadComboBoxDropDown_Metro 
+RadComboBox_Black, .RadComboBox_Black .rcbInput, .RadComboBoxDropDown_Black 
 {
      color: #ffc33f !important;
 }
-div.RadComboBox_Metro table td.rcbInputCellLeft {
+div.RadComboBox_Black table td.rcbInputCellLeft {
     border-width:  0 !important;
 }
-.RadComboBox_Metro .rcbHovered .rcbArrowCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbArrowCellHidden 
+.RadComboBox_Black .rcbHovered .rcbArrowCell, .RadComboBox_Black .rcbHovered .rcbReadOnly .rcbInputCell, .RadComboBox_Black .rcbHovered .rcbReadOnly .rcbArrowCellHidden 
 {
    background-color: #000 !important;
 }
-div.RadComboBox_Metro .rcbHovered .rcbArrowCell, div.RadComboBox_Metro .rcbHovered .rcbInputCell 
+div.RadComboBox_Black .rcbHovered .rcbArrowCell, div.RadComboBox_Black .rcbHovered .rcbInputCell 
 {
   background-color: #000 !important;
 }
@@ -491,25 +694,25 @@ div.RadComboBox_Metro table td.rcbInputCell
 {
     background-color: #000!important;
 }
-div.RadComboBox_Metro .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Metro .rcbArrowCellHidden.rcbArrowCellRight 
+div.RadComboBox_Black .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Black .rcbArrowCellHidden.rcbArrowCellRight 
 {
     border-width: 0 !important;
 }
-.RadComboBox_Metro .rcbHovered .rcbArrowCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbArrowCellHidden
+.RadComboBox_Black .rcbHovered .rcbArrowCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbInputCell, .RadComboBox_Metro .rcbHovered .rcbReadOnly .rcbArrowCellHidden
 {
     background-color: #000!important;
 }
-div.RadComboBox_Metro .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Metro .rcbArrowCellHidden.rcbArrowCellRight 
+div.RadComboBox_Black .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Metro .rcbArrowCellHidden.rcbArrowCellRight 
 {
      border-width: 0 !important;
 }
-.RadComboBoxDropDown_Metro {
-    background-color: #000 !important;
+.RadComboBoxDropDown_Black {
+     background-color: #4c0001  !important;
     border-color: #000 !important;
     border-width: 0px !important;
     border-style:none !important;
 }
-div.RadComboBoxDropDown_Metro .rcbHovered {
+div.RadComboBoxDropDown_Black .rcbHovered {
     background-color: #4c0001 !important;
     color: #ffc33f !important;
     padding: 1px 5px !important;
@@ -548,15 +751,16 @@ div.RadComboBoxDropDown_Metro .rcbHovered {
     margin:0px;
     padding:0px;    
 }
- .homepanel h4
+ .homepanel h4, .ChildCategoriespanel h4
 {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 10pt;
     text-transform: uppercase;
     line-height: 28px;
-    font-weight:bold
-}
+    font-weight:bold;
+    padding-left:10px;
+   }
  h4
 {
     margin-top: 0px;
@@ -577,46 +781,99 @@ div.RadComboBoxDropDown_Metro .rcbHovered {
     margin-right:0PX;*/
     position: absolute;
     bottom: 0px;
-    font-size:9pt;  
+    font-size:10pt;     
+   height:30%;
+   margin-left:20px;
+   margin-bottom:15px;
+   overflow: hidden;
 }
-.homepanel ul, ul#ctl00_cphWithoutScroll_CategoryViewID_ulChildCategories
+.homepanel ul
 {
     list-style-type: none;
     list-style-image: none;
-    overflow: hidden;
+    overflow: visible;
+    margin-bottom: 0px;
+    text-align:center;
+    float: right;
+    height:117px;
+}
+.ChildCategories
+{
+       display: block;
+    float: right;
+    position: relative;
+    text-align: center;
+    top: 0;
+    z-index: 9000;
+}
+.homepanel ul li, ul.ChildCategoriespanel li
+{
+    margin: 0px 5px 0px 5PX;
+    list-style-type: none;
+    list-style-image: none;
+    overflow: visible;
     float: left;
     display: inline;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    padding: 2px;    
+      height: 102px;
+     background: #c1853e; /* Old browsers */
+background: -moz-linear-gradient(top, #e1a251 0%, #430001 50%, #e1a251 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1a251), color-stop(50%,#430001), color-stop(100%,#e1a251)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #e1a251 0%,#430001 50%,#e1a251 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #e1a251 0%,#430001 50%,#e1a251 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #e1a251 0%,#430001 50%,#e1a251 100%); /* IE10+ */
+background: linear-gradient(to bottom, #e1a251 0%,#430001 50%,#e1a251 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1a251', endColorstr='#e1a251',GradientType=0 ); /* IE6-9 */
+ -webkit-box-shadow: 0 0 150px rgba(252, 202, 101, 1.0);
+-moz-box-shadow:0 0 150px rgba(252, 202, 101, 1.0);
+box-shadow: 0 0 150px rgba(252, 202, 101, 1.0); 
 
 }
-.homepanel ul li, ul#ctl00_cphWithoutScroll_CategoryViewID_ulChildCategories li
+.homepanel ul li a, .ChildCategoriespanel li a
 {
-      list-style-type: none; 
-      list-style-image: none; 
-      overflow: hidden; 
-      float: left; 
-      display: inline;     
-     margin-left:15PX;
-     margin-right:10px;
+        margin:0px !important;
+        padding:0px !important;
+        display: block;
+       
 }
-    .homepanel ul li a
-    {
+.homepanel ul li img
+{
         margin:0px !important;
         padding:0px !important;
-        height:30px;
-          }
-     .homepanel ul li img
-    {
-        margin:0px !important;
-        padding:0px !important;
-        border: solid 2px #f0bc5e !important;
-    }
+        width:180px;
+        height: 102px;
+}
+.homepanel ul li
+{background-color:rgba(252, 202, 101, .9);
+ -webkit-box-shadow: 0 0 150px rgba(252, 202, 101, 1.0);
+-moz-box-shadow:0 0 150px rgba(252, 202, 101, 1.0);
+box-shadow: 0 0 150px rgba(252, 202, 101, 1.0); 
+ 
+behavior: url(PIE.htc);
+}
 #footertext div.homepanel
 {
-    padding-left:10px;
-    padding-right: 0px;
-    float: right;
+    float:none;
+    text-align:center;
+    top:0px;
+    position:relative;
+    z-index:9000;
+    display:block;    
+
+}
+	
+#footertext
+{
+    width: 1200px;
+    vertical-align: bottom !important;
+    position:relative;
+    bottom: 0px;
+    height: 100%;
+    color: #ffd681;
+    margin-right: auto;
+    margin-left: auto;
+    float:none;    
+   
 }
 
 .HomeBOOKING input, #tablebookingpage input, textarea, .contactbookingtable input
@@ -628,10 +885,17 @@ div.RadComboBoxDropDown_Metro .rcbHovered {
     behavior: url(PIE.htc);
     margin-bottom:0px;
     padding-left:5px;
-        z-index:1000 !important;
-    position:relative
+    z-index:9999 !important;
+    position:relative;
 }
-
+.PleaseFillInData
+{
+  width:400px;
+  float: right;
+  text-align: right !important;
+  padding-right:40px;
+  margin-top:-45px;
+}
 .HomeBOOKING select,  #tablebookingpage select,.contactbookingtable select
 {
     border: 1px none #fff;
@@ -643,6 +907,38 @@ div.RadComboBoxDropDown_Metro .rcbHovered {
     width:80px;
     padding-left:5px
 }
+.CategoryContentContactUS
+{
+    float:left;
+}
+.FooterContentBlockContactUSpage
+{width:1000px;
+ margin: 0px auto 20px auto;
+    display: block;
+    position: absolute;
+    vertical-align: bottom;
+    bottom: 0px !important;
+    margin: 20px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 0px;
+    behavior: url(PIE.htc);
+    border-color: #3d0303;
+    overflow: visible;
+    min-height:130px;
+    padding:20px;
+    background: #3d0303;   
+  }
+.ContactUSpanel
+{  float:left;
+}
+    .ContactUSpanel table tr td
+    {
+        vertical-align: top;
+        padding-left: 20px
+    }
 .locationtable td
 {
     padding:5px;
@@ -666,27 +962,24 @@ div.RadComboBoxDropDown_Metro .rcbHovered {
 .PriceRoomstyle
 {
     padding: 15px;
-    float: right;
-    margin: 0px;
-    background-color: #222;
-    
+    float: right;  
 }
 .subpagetitle
 {
-   background:rgba(0, 0, 0, 0.5);   
-   background: rgb(0, 0, 0) transparent;
+   background:rgba(61, 3, 3, 0.5);   
+   background: rgb(61, 3, 3) transparent;
    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000);
    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000)";
-    margin-top:0px;
     z-index:+1000;
     position:relative;
-    padding-left:10px;
-   height:30px;
-    padding-top:0px !important;
-    padding-bottom:0px !important;
-    margin-top:-30px;
+    bottom:0px !important;
+    width:180px; 
+    text-align:left;
+   margin-top:-28px;
+    
   }
-#ctl00_TopMenu_mnTop a.popout
+
+#ctl00_TopMenu_mnTop a.popout, #ctl00_TopMenu_mnTop a.static 
 {
     background-image: none !important;
     text-shadow:1px 3px 1px #360507;
@@ -702,31 +995,32 @@ html body .RadInput_Black .riTextBox, html body .RadInputMgr_Black
 }
 
 /* Thumbnail Tray
-	----------------------------*/			
+	----------------------------*/
 #thumb-tray
-{ 
-    z-index:3; 
-    bottom:0; 
-    height:150px; 
-    width:800px; 
-    overflow:hidden; 
-    text-align:center; 
+{
+    z-index: 3;
+    bottom: 0;
+    width: 720px;
+    overflow: hidden;
+    text-align: center;
     bottom: 0px !important;
-    margin-top:0px;
-    margin-left:43px;
+    margin-top: 0px;
+    margin-left:40px;
 }
 
 #thumb-back, #thumb-forward
 { 
-    position:absolute; z-index:5; bottom:42px; height:108px; width:40px; 
+    position:absolute; 
+    z-index:5;      
+    height:108px; 
+    width:40px;
+    margin-left:-40px; 
     
 }
 
 #thumb-back
 { 
-    left:0; 
-    background: url('Images/thumb-back.gif') no-repeat center center;
-    margin-left:40px;
+    background: url('Images/thumb-back.gif') no-repeat center center; 
 }
 
 #thumb-forward
@@ -747,8 +1041,6 @@ ul#thumb-list
     position:relative; 
     left:0px; 
     padding:0 0px; 
-    margin-left:0px;
-    margin-top:15px
 }
 
 ul#thumb-list li
@@ -816,4 +1108,40 @@ ul#thumb-list li:hover
     z-index: 10000 !important;
     position: relative; color: #000 !important;
 
+}
+.Gallerystyle
+{width:830px;
+ float:right;
+ top:0px;
+ position:absolute;
+ right:0px;
+    display: block;  
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 0px;
+    behavior: url(PIE.htc);
+    border-color: #3d0303;
+    overflow: visible;
+    padding:20px;
+    background: #3d0303;   
+    overflow:hidden;
+}
+.Gallerystyle1
+{
+    width:1160px;  
+    min-height:100%;
+    display: block;  
+    overflow:visible;
+}
+.CategoryContentGallery
+{
+     width:250px;
+  margin-top:20px;
+    min-height: 60%;
+}
+.RadComboBox .rcbInputCell .rcbInput 
+{
+     height:19px;  
 }
