@@ -274,6 +274,7 @@ public class Utils
         {
             menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=RoomList", "НОМЕРИ"));
             menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=RoomCategoryList", "КАТЕГОРІЇ НОМЕРІВ"));
+            menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=SettingsEdit&SettingID=1", "НАЛАШТУВАННЯ"));
         }
     }
 

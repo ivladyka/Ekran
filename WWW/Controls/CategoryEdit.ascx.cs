@@ -38,11 +38,19 @@ public partial class CategoryEdit : EditControlBase
             case "Інформація":
                 pnlCategoryEdit.Visible = true;
                 pnlGalleryList.Visible = false;
+                pnlSEO.Visible = false;
                 break;
             case "Фотографії":
                 pnlCategoryEdit.Visible = false;
                 pnlGalleryList.Visible = true;
-                GalleryList.RebindGrid();
+                pnlSEO.Visible = false;
+                galleryList.RebindGrid();
+                break;
+            case "SEO":
+                pnlCategoryEdit.Visible = false;
+                pnlGalleryList.Visible = false;
+                pnlSEO.Visible = true;
+                LoadSEO();
                 break;
         }
     }
@@ -92,4 +100,38 @@ public partial class CategoryEdit : EditControlBase
 
     }
 
+    private void LoadSEO()
+    {
+        Category cat = new Category();
+        if(cat.LoadByPrimaryKey(CategoryID))
+        {
+            tbKeywords.Text = cat.s_Keywords;
+            tbKeywords_pl.Text = cat.s_Keywords_pl;
+            tbKeywords_en.Text = cat.s_Keywords_en;
+            tbDescription.Text = cat.s_Description;
+            tbDescription_pl.Text = cat.s_Description_pl;
+            tbDescription_en.Text = cat.s_Description_en;
+        }
+    }
+
+    protected void btnSaveSEO_Click(object sender, EventArgs e)
+    {
+        Category cat = new Category();
+        if (cat.LoadByPrimaryKey(CategoryID))
+        {
+            cat.s_Keywords = tbKeywords.Text;
+            cat.s_Keywords_pl = tbKeywords_pl.Text;
+            cat.s_Keywords_en = tbKeywords_en.Text;
+            cat.s_Description = tbDescription.Text;
+            cat.s_Description_pl = tbDescription_pl.Text;
+            cat.s_Description_en = tbDescription_en.Text;
+            cat.Save();
+        }
+        RedirectBackToList();
+    }
+
+    protected void btnCancelSEO_Click(object sender, EventArgs e)
+    {
+        RedirectBackToList();
+    }
 }

@@ -9,6 +9,9 @@ using System.Web.UI;
 
 public partial class DefaultMP : MasterPageBase
 {
+    string m_Keywords = "";
+    string m_Description = "";
+
     protected void Page_Load(object sender, EventArgs e)
     {
         string culture = "uk-UA";
@@ -27,6 +30,10 @@ public partial class DefaultMP : MasterPageBase
             case "uk-UA":
                 ddLanguage.SelectedValue = "UA";
                 break;
+        }
+        if (!Page.IsPostBack)
+        {
+            LoadCommonPageData();
         }
     }
 
@@ -94,7 +101,7 @@ public partial class DefaultMP : MasterPageBase
     {
         get
         {
-            return "<meta name='description' content=\"" + Resources.Vikkisoft.MetaDescription + "\" />";
+            return "<meta name='description' content=\"" + m_Description + "\" />";
         }
     }
 
@@ -102,7 +109,43 @@ public partial class DefaultMP : MasterPageBase
     {
         get
         {
-            return "<meta name='keywords' content=\"" + Resources.Vikkisoft.MetaKeywords + "\" />";
+            return "<meta name='keywords' content=\"" + m_Keywords + "\" />";
+        }
+    }
+
+    private void LoadCommonPageData()
+    {
+        Settings s = new Settings();
+        if (s.LoadByPrimaryKey(1))
+        {
+            Category c = new Category();
+            if (c.LoadByPrimaryKey(CategoryID))
+            {
+                if (!c.IsColumnNull("Keywords" + Utils.LangPrefix))
+                {
+                    m_Keywords = c.GetColumn("Keywords" + Utils.LangPrefix).ToString();
+                }
+                if (!c.IsColumnNull("Description" + Utils.LangPrefix))
+                {
+                    m_Description = c.GetColumn("Description" + Utils.LangPrefix).ToString();
+                }
+            }
+            if (m_Keywords.TrimEnd().Length == 0 && !s.IsColumnNull("Keywords" + Utils.LangPrefix))
+            {
+                m_Keywords = s.GetColumn("Keywords" + Utils.LangPrefix).ToString();
+            }
+            if (m_Description.TrimEnd().Length == 0 && !s.IsColumnNull("Description" + Utils.LangPrefix))
+            {
+                m_Description = s.GetColumn("Description" + Utils.LangPrefix).ToString();
+            }
+            if (m_Keywords.TrimEnd().Length == 0)
+            {
+                m_Keywords = Resources.Vikkisoft.MetaKeywords;
+            }
+            if (m_Description.TrimEnd().Length == 0)
+            {
+                m_Description = Resources.Vikkisoft.MetaDescription;
+            }
         }
     }
 }

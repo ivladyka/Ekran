@@ -11,6 +11,8 @@
         </telerik:RadTab>
         <telerik:RadTab Text="Фотографії">
         </telerik:RadTab>
+        <telerik:RadTab Text="SEO">
+        </telerik:RadTab>
     </Tabs>
 </telerik:RadTabStrip>
 <asp:Panel ID="pnlCategoryEdit" runat="server" >
@@ -104,5 +106,70 @@
     </table>
 </asp:Panel>
 <asp:Panel ID="pnlGalleryList" runat="server" Visible="false">
-    <uc1:GalleryList id="GalleryList" runat="server"></uc1:GalleryList>
-</asp:Panel></div>
+    <uc1:GalleryList id="galleryList" runat="server"></uc1:GalleryList>
+</asp:Panel>
+<asp:Panel ID="pnlSEO" runat="server" Visible="false">
+    <table id="Table4" align="center" border="0" cellpadding="2" cellspacing="5" >
+            <tr>
+                <td align="right">
+                    Ключові слова:
+                </td>
+                <td>
+                    <asp:TextBox ID="tbKeywords" runat="server" CssClass="textBoxStyle" MaxLength="250" Width="600px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Ключові&nbsp;слова&nbsp;(пол.):
+                </td>
+                <td>
+                    <asp:TextBox ID="tbKeywords_pl" runat="server" CssClass="textBoxStyle" MaxLength="250" Width="600px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Ключові слова (анг.):
+                </td>
+                <td>
+                    <asp:TextBox ID="tbKeywords_en" runat="server" CssClass="textBoxStyle" MaxLength="250" Width="600px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Опис:
+                </td>
+                <td>
+                    <asp:TextBox ID="tbDescription" runat="server" CssClass="textBoxStyle" MaxLength="200" Width="600px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Опис (пол.):
+                </td>
+                <td>
+                    <asp:TextBox ID="tbDescription_pl" runat="server" CssClass="textBoxStyle" MaxLength="200" Width="600px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Опис (анг.):
+                </td>
+                <td>
+                    <asp:TextBox ID="tbDescription_en" runat="server" CssClass="textBoxStyle" MaxLength="200" Width="600px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+               <td align="right" colspan="2">
+                        &nbsp;                    
+                           <asp:Button ID="btnCancelSEO" runat="server" CommandArgument="False" ForeColor="Black" BorderStyle="None" Font-Size="10pt"  Height="30px" BackColor="#ffc33f"
+                            commandname="Cancel" CssClass="formbutton1" Text="Відмінити" onclick="btnCancelSEO_Click" />     
+                   <asp:Button ID="btnSaveSEO" runat="server" CommandArgument="Update" 
+                            ForeColor="Black" BorderStyle="None" Font-Size="10pt"  Height="30px" BackColor="#ffc33f"
+                            commandname="Update" CssClass="formbutton1" Text="Зберегти" 
+                            onclick="btnSaveSEO_Click"/>
+                </td>
+             </tr>
+            
+    </table>
+</asp:Panel>
+</div>

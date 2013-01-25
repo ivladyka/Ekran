@@ -123,6 +123,54 @@ namespace VikkiSoft_BLL.DAL
 				}
 			}
 			
+			public static SqlParameter Keywords
+			{
+				get
+				{
+					return new SqlParameter("@Keywords", SqlDbType.VarChar, 250);
+				}
+			}
+			
+			public static SqlParameter Keywords_en
+			{
+				get
+				{
+					return new SqlParameter("@Keywords_en", SqlDbType.VarChar, 250);
+				}
+			}
+			
+			public static SqlParameter Keywords_pl
+			{
+				get
+				{
+					return new SqlParameter("@Keywords_pl", SqlDbType.NVarChar, 250);
+				}
+			}
+			
+			public static SqlParameter Description
+			{
+				get
+				{
+					return new SqlParameter("@Description", SqlDbType.VarChar, 200);
+				}
+			}
+			
+			public static SqlParameter Description_en
+			{
+				get
+				{
+					return new SqlParameter("@Description_en", SqlDbType.VarChar, 200);
+				}
+			}
+			
+			public static SqlParameter Description_pl
+			{
+				get
+				{
+					return new SqlParameter("@Description_pl", SqlDbType.NVarChar, 200);
+				}
+			}
+			
 		}
 		#endregion		
 	
@@ -132,6 +180,12 @@ namespace VikkiSoft_BLL.DAL
             public const string SettingID = "SettingID";
             public const string UserName = "UserName";
             public const string Password = "Password";
+            public const string Keywords = "Keywords";
+            public const string Keywords_en = "Keywords_en";
+            public const string Keywords_pl = "Keywords_pl";
+            public const string Description = "Description";
+            public const string Description_en = "Description_en";
+            public const string Description_pl = "Description_pl";
 
 			static public string ToPropertyName(string columnName)
 			{
@@ -142,6 +196,12 @@ namespace VikkiSoft_BLL.DAL
 					ht[SettingID] = _Settings.PropertyNames.SettingID;
 					ht[UserName] = _Settings.PropertyNames.UserName;
 					ht[Password] = _Settings.PropertyNames.Password;
+					ht[Keywords] = _Settings.PropertyNames.Keywords;
+					ht[Keywords_en] = _Settings.PropertyNames.Keywords_en;
+					ht[Keywords_pl] = _Settings.PropertyNames.Keywords_pl;
+					ht[Description] = _Settings.PropertyNames.Description;
+					ht[Description_en] = _Settings.PropertyNames.Description_en;
+					ht[Description_pl] = _Settings.PropertyNames.Description_pl;
 
 				}
 				return (string)ht[columnName];
@@ -157,6 +217,12 @@ namespace VikkiSoft_BLL.DAL
             public const string SettingID = "SettingID";
             public const string UserName = "UserName";
             public const string Password = "Password";
+            public const string Keywords = "Keywords";
+            public const string Keywords_en = "Keywords_en";
+            public const string Keywords_pl = "Keywords_pl";
+            public const string Description = "Description";
+            public const string Description_en = "Description_en";
+            public const string Description_pl = "Description_pl";
 
 			static public string ToColumnName(string propertyName)
 			{
@@ -167,6 +233,12 @@ namespace VikkiSoft_BLL.DAL
 					ht[SettingID] = _Settings.ColumnNames.SettingID;
 					ht[UserName] = _Settings.ColumnNames.UserName;
 					ht[Password] = _Settings.ColumnNames.Password;
+					ht[Keywords] = _Settings.ColumnNames.Keywords;
+					ht[Keywords_en] = _Settings.ColumnNames.Keywords_en;
+					ht[Keywords_pl] = _Settings.ColumnNames.Keywords_pl;
+					ht[Description] = _Settings.ColumnNames.Description;
+					ht[Description_en] = _Settings.ColumnNames.Description_en;
+					ht[Description_pl] = _Settings.ColumnNames.Description_pl;
 
 				}
 				return (string)ht[propertyName];
@@ -182,6 +254,12 @@ namespace VikkiSoft_BLL.DAL
             public const string SettingID = "s_SettingID";
             public const string UserName = "s_UserName";
             public const string Password = "s_Password";
+            public const string Keywords = "s_Keywords";
+            public const string Keywords_en = "s_Keywords_en";
+            public const string Keywords_pl = "s_Keywords_pl";
+            public const string Description = "s_Description";
+            public const string Description_en = "s_Description_en";
+            public const string Description_pl = "s_Description_pl";
 
 		}
 		#endregion		
@@ -221,6 +299,78 @@ namespace VikkiSoft_BLL.DAL
 			set
 	        {
 				base.Setstring(ColumnNames.Password, value);
+			}
+		}
+
+		public virtual string Keywords
+	    {
+			get
+	        {
+				return base.Getstring(ColumnNames.Keywords);
+			}
+			set
+	        {
+				base.Setstring(ColumnNames.Keywords, value);
+			}
+		}
+
+		public virtual string Keywords_en
+	    {
+			get
+	        {
+				return base.Getstring(ColumnNames.Keywords_en);
+			}
+			set
+	        {
+				base.Setstring(ColumnNames.Keywords_en, value);
+			}
+		}
+
+		public virtual string Keywords_pl
+	    {
+			get
+	        {
+				return base.Getstring(ColumnNames.Keywords_pl);
+			}
+			set
+	        {
+				base.Setstring(ColumnNames.Keywords_pl, value);
+			}
+		}
+
+		public virtual string Description
+	    {
+			get
+	        {
+				return base.Getstring(ColumnNames.Description);
+			}
+			set
+	        {
+				base.Setstring(ColumnNames.Description, value);
+			}
+		}
+
+		public virtual string Description_en
+	    {
+			get
+	        {
+				return base.Getstring(ColumnNames.Description_en);
+			}
+			set
+	        {
+				base.Setstring(ColumnNames.Description_en, value);
+			}
+		}
+
+		public virtual string Description_pl
+	    {
+			get
+	        {
+				return base.Getstring(ColumnNames.Description_pl);
+			}
+			set
+	        {
+				base.Setstring(ColumnNames.Description_pl, value);
 			}
 		}
 
@@ -271,6 +421,96 @@ namespace VikkiSoft_BLL.DAL
 					this.SetColumnNull(ColumnNames.Password);
 				else
 					this.Password = base.SetstringAsString(ColumnNames.Password, value);
+			}
+		}
+
+		public virtual string s_Keywords
+	    {
+			get
+	        {
+				return this.IsColumnNull(ColumnNames.Keywords) ? string.Empty : base.GetstringAsString(ColumnNames.Keywords);
+			}
+			set
+	        {
+				if(string.Empty == value)
+					this.SetColumnNull(ColumnNames.Keywords);
+				else
+					this.Keywords = base.SetstringAsString(ColumnNames.Keywords, value);
+			}
+		}
+
+		public virtual string s_Keywords_en
+	    {
+			get
+	        {
+				return this.IsColumnNull(ColumnNames.Keywords_en) ? string.Empty : base.GetstringAsString(ColumnNames.Keywords_en);
+			}
+			set
+	        {
+				if(string.Empty == value)
+					this.SetColumnNull(ColumnNames.Keywords_en);
+				else
+					this.Keywords_en = base.SetstringAsString(ColumnNames.Keywords_en, value);
+			}
+		}
+
+		public virtual string s_Keywords_pl
+	    {
+			get
+	        {
+				return this.IsColumnNull(ColumnNames.Keywords_pl) ? string.Empty : base.GetstringAsString(ColumnNames.Keywords_pl);
+			}
+			set
+	        {
+				if(string.Empty == value)
+					this.SetColumnNull(ColumnNames.Keywords_pl);
+				else
+					this.Keywords_pl = base.SetstringAsString(ColumnNames.Keywords_pl, value);
+			}
+		}
+
+		public virtual string s_Description
+	    {
+			get
+	        {
+				return this.IsColumnNull(ColumnNames.Description) ? string.Empty : base.GetstringAsString(ColumnNames.Description);
+			}
+			set
+	        {
+				if(string.Empty == value)
+					this.SetColumnNull(ColumnNames.Description);
+				else
+					this.Description = base.SetstringAsString(ColumnNames.Description, value);
+			}
+		}
+
+		public virtual string s_Description_en
+	    {
+			get
+	        {
+				return this.IsColumnNull(ColumnNames.Description_en) ? string.Empty : base.GetstringAsString(ColumnNames.Description_en);
+			}
+			set
+	        {
+				if(string.Empty == value)
+					this.SetColumnNull(ColumnNames.Description_en);
+				else
+					this.Description_en = base.SetstringAsString(ColumnNames.Description_en, value);
+			}
+		}
+
+		public virtual string s_Description_pl
+	    {
+			get
+	        {
+				return this.IsColumnNull(ColumnNames.Description_pl) ? string.Empty : base.GetstringAsString(ColumnNames.Description_pl);
+			}
+			set
+	        {
+				if(string.Empty == value)
+					this.SetColumnNull(ColumnNames.Description_pl);
+				else
+					this.Description_pl = base.SetstringAsString(ColumnNames.Description_pl, value);
 			}
 		}
 
@@ -337,6 +577,66 @@ namespace VikkiSoft_BLL.DAL
 					}
 				}
 
+				public WhereParameter Keywords
+				{
+					get
+					{
+							WhereParameter where = new WhereParameter(ColumnNames.Keywords, Parameters.Keywords);
+							this._clause._entity.Query.AddWhereParameter(where);
+							return where;
+					}
+				}
+
+				public WhereParameter Keywords_en
+				{
+					get
+					{
+							WhereParameter where = new WhereParameter(ColumnNames.Keywords_en, Parameters.Keywords_en);
+							this._clause._entity.Query.AddWhereParameter(where);
+							return where;
+					}
+				}
+
+				public WhereParameter Keywords_pl
+				{
+					get
+					{
+							WhereParameter where = new WhereParameter(ColumnNames.Keywords_pl, Parameters.Keywords_pl);
+							this._clause._entity.Query.AddWhereParameter(where);
+							return where;
+					}
+				}
+
+				public WhereParameter Description
+				{
+					get
+					{
+							WhereParameter where = new WhereParameter(ColumnNames.Description, Parameters.Description);
+							this._clause._entity.Query.AddWhereParameter(where);
+							return where;
+					}
+				}
+
+				public WhereParameter Description_en
+				{
+					get
+					{
+							WhereParameter where = new WhereParameter(ColumnNames.Description_en, Parameters.Description_en);
+							this._clause._entity.Query.AddWhereParameter(where);
+							return where;
+					}
+				}
+
+				public WhereParameter Description_pl
+				{
+					get
+					{
+							WhereParameter where = new WhereParameter(ColumnNames.Description_pl, Parameters.Description_pl);
+							this._clause._entity.Query.AddWhereParameter(where);
+							return where;
+					}
+				}
+
 
 				private WhereClause _clause;
 			}
@@ -378,15 +678,99 @@ namespace VikkiSoft_BLL.DAL
 				}
 			}
 
+			public WhereParameter Keywords
+		    {
+				get
+		        {
+					if(_Keywords_W == null)
+	        	    {
+						_Keywords_W = TearOff.Keywords;
+					}
+					return _Keywords_W;
+				}
+			}
+
+			public WhereParameter Keywords_en
+		    {
+				get
+		        {
+					if(_Keywords_en_W == null)
+	        	    {
+						_Keywords_en_W = TearOff.Keywords_en;
+					}
+					return _Keywords_en_W;
+				}
+			}
+
+			public WhereParameter Keywords_pl
+		    {
+				get
+		        {
+					if(_Keywords_pl_W == null)
+	        	    {
+						_Keywords_pl_W = TearOff.Keywords_pl;
+					}
+					return _Keywords_pl_W;
+				}
+			}
+
+			public WhereParameter Description
+		    {
+				get
+		        {
+					if(_Description_W == null)
+	        	    {
+						_Description_W = TearOff.Description;
+					}
+					return _Description_W;
+				}
+			}
+
+			public WhereParameter Description_en
+		    {
+				get
+		        {
+					if(_Description_en_W == null)
+	        	    {
+						_Description_en_W = TearOff.Description_en;
+					}
+					return _Description_en_W;
+				}
+			}
+
+			public WhereParameter Description_pl
+		    {
+				get
+		        {
+					if(_Description_pl_W == null)
+	        	    {
+						_Description_pl_W = TearOff.Description_pl;
+					}
+					return _Description_pl_W;
+				}
+			}
+
 			private WhereParameter _SettingID_W = null;
 			private WhereParameter _UserName_W = null;
 			private WhereParameter _Password_W = null;
+			private WhereParameter _Keywords_W = null;
+			private WhereParameter _Keywords_en_W = null;
+			private WhereParameter _Keywords_pl_W = null;
+			private WhereParameter _Description_W = null;
+			private WhereParameter _Description_en_W = null;
+			private WhereParameter _Description_pl_W = null;
 
 			public void WhereClauseReset()
 			{
 				_SettingID_W = null;
 				_UserName_W = null;
 				_Password_W = null;
+				_Keywords_W = null;
+				_Keywords_en_W = null;
+				_Keywords_pl_W = null;
+				_Description_W = null;
+				_Description_en_W = null;
+				_Description_pl_W = null;
 
 				this._entity.Query.FlushWhereParameters();
 
@@ -473,6 +857,66 @@ namespace VikkiSoft_BLL.DAL
 					}
 				}
 
+				public AggregateParameter Keywords
+				{
+					get
+					{
+							AggregateParameter aggregate = new AggregateParameter(ColumnNames.Keywords, Parameters.Keywords);
+							this._clause._entity.Query.AddAggregateParameter(aggregate);
+							return aggregate;
+					}
+				}
+
+				public AggregateParameter Keywords_en
+				{
+					get
+					{
+							AggregateParameter aggregate = new AggregateParameter(ColumnNames.Keywords_en, Parameters.Keywords_en);
+							this._clause._entity.Query.AddAggregateParameter(aggregate);
+							return aggregate;
+					}
+				}
+
+				public AggregateParameter Keywords_pl
+				{
+					get
+					{
+							AggregateParameter aggregate = new AggregateParameter(ColumnNames.Keywords_pl, Parameters.Keywords_pl);
+							this._clause._entity.Query.AddAggregateParameter(aggregate);
+							return aggregate;
+					}
+				}
+
+				public AggregateParameter Description
+				{
+					get
+					{
+							AggregateParameter aggregate = new AggregateParameter(ColumnNames.Description, Parameters.Description);
+							this._clause._entity.Query.AddAggregateParameter(aggregate);
+							return aggregate;
+					}
+				}
+
+				public AggregateParameter Description_en
+				{
+					get
+					{
+							AggregateParameter aggregate = new AggregateParameter(ColumnNames.Description_en, Parameters.Description_en);
+							this._clause._entity.Query.AddAggregateParameter(aggregate);
+							return aggregate;
+					}
+				}
+
+				public AggregateParameter Description_pl
+				{
+					get
+					{
+							AggregateParameter aggregate = new AggregateParameter(ColumnNames.Description_pl, Parameters.Description_pl);
+							this._clause._entity.Query.AddAggregateParameter(aggregate);
+							return aggregate;
+					}
+				}
+
 
 				private AggregateClause _clause;
 			}
@@ -514,15 +958,99 @@ namespace VikkiSoft_BLL.DAL
 				}
 			}
 
+			public AggregateParameter Keywords
+		    {
+				get
+		        {
+					if(_Keywords_W == null)
+	        	    {
+						_Keywords_W = TearOff.Keywords;
+					}
+					return _Keywords_W;
+				}
+			}
+
+			public AggregateParameter Keywords_en
+		    {
+				get
+		        {
+					if(_Keywords_en_W == null)
+	        	    {
+						_Keywords_en_W = TearOff.Keywords_en;
+					}
+					return _Keywords_en_W;
+				}
+			}
+
+			public AggregateParameter Keywords_pl
+		    {
+				get
+		        {
+					if(_Keywords_pl_W == null)
+	        	    {
+						_Keywords_pl_W = TearOff.Keywords_pl;
+					}
+					return _Keywords_pl_W;
+				}
+			}
+
+			public AggregateParameter Description
+		    {
+				get
+		        {
+					if(_Description_W == null)
+	        	    {
+						_Description_W = TearOff.Description;
+					}
+					return _Description_W;
+				}
+			}
+
+			public AggregateParameter Description_en
+		    {
+				get
+		        {
+					if(_Description_en_W == null)
+	        	    {
+						_Description_en_W = TearOff.Description_en;
+					}
+					return _Description_en_W;
+				}
+			}
+
+			public AggregateParameter Description_pl
+		    {
+				get
+		        {
+					if(_Description_pl_W == null)
+	        	    {
+						_Description_pl_W = TearOff.Description_pl;
+					}
+					return _Description_pl_W;
+				}
+			}
+
 			private AggregateParameter _SettingID_W = null;
 			private AggregateParameter _UserName_W = null;
 			private AggregateParameter _Password_W = null;
+			private AggregateParameter _Keywords_W = null;
+			private AggregateParameter _Keywords_en_W = null;
+			private AggregateParameter _Keywords_pl_W = null;
+			private AggregateParameter _Description_W = null;
+			private AggregateParameter _Description_en_W = null;
+			private AggregateParameter _Description_pl_W = null;
 
 			public void AggregateClauseReset()
 			{
 				_SettingID_W = null;
 				_UserName_W = null;
 				_Password_W = null;
+				_Keywords_W = null;
+				_Keywords_en_W = null;
+				_Keywords_pl_W = null;
+				_Description_W = null;
+				_Description_en_W = null;
+				_Description_pl_W = null;
 
 				this._entity.Query.FlushAggregateParameters();
 
@@ -607,6 +1135,30 @@ namespace VikkiSoft_BLL.DAL
 
 			p = cmd.Parameters.Add(Parameters.Password);
 			p.SourceColumn = ColumnNames.Password;
+			p.SourceVersion = DataRowVersion.Current;
+
+			p = cmd.Parameters.Add(Parameters.Keywords);
+			p.SourceColumn = ColumnNames.Keywords;
+			p.SourceVersion = DataRowVersion.Current;
+
+			p = cmd.Parameters.Add(Parameters.Keywords_en);
+			p.SourceColumn = ColumnNames.Keywords_en;
+			p.SourceVersion = DataRowVersion.Current;
+
+			p = cmd.Parameters.Add(Parameters.Keywords_pl);
+			p.SourceColumn = ColumnNames.Keywords_pl;
+			p.SourceVersion = DataRowVersion.Current;
+
+			p = cmd.Parameters.Add(Parameters.Description);
+			p.SourceColumn = ColumnNames.Description;
+			p.SourceVersion = DataRowVersion.Current;
+
+			p = cmd.Parameters.Add(Parameters.Description_en);
+			p.SourceColumn = ColumnNames.Description_en;
+			p.SourceVersion = DataRowVersion.Current;
+
+			p = cmd.Parameters.Add(Parameters.Description_pl);
+			p.SourceColumn = ColumnNames.Description_pl;
 			p.SourceVersion = DataRowVersion.Current;
 
 

@@ -235,9 +235,9 @@ z-index:99;
 }
 .FooterContentBlock ul li
 {
-    list-style-type: none;
+    list-style-type: disc !important;
     list-style-image: none;
-    list-style-position: inside;
+    list-style-position: outside !important;
     display: block;
 }
 .FooterContentBlock

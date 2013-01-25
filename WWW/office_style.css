@@ -360,7 +360,7 @@ div.RadComboBoxDropDown_Metro .rcbHovered {
 #nextthumb:active, #prevthumb:active{ bottom:10px; }		
 		/*Add hover pointer*/
 #controls > *:hover, #nextthumb:hover, #prevthumb:hover{ cursor:pointer; }
- #Table3, #ctl00_cphWithoutScroll_CategoryEditID_pnlGalleryList
+ #Table3, #ctl00_cphWithoutScroll_CategoryEditID_pnlGalleryList, #Table4
 {  -webkit-border-radius: 20px 20px 20px 20px  !important;
     -moz-border-radius: 20px 20px 20px 20px !important;
     border-radius: 20px 20px 20px 20px !important;
