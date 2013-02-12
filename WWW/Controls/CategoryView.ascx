@@ -30,7 +30,7 @@
                        </ul>
                    
   </asp:Panel>
-  <asp:Panel ID="pnlHomeSection" runat="server" Visible="false" CssClass="homepanel" HorizontalAlign="Left">               
+  <asp:Panel ID="pnlHomeSection" runat="server" Visible="false" CssClass="homepanel" HorizontalAlign="right">               
             <ul>
         <li id="liAbourUS" runat="server">
             <a href="Default.aspx?content=CategoryView&CategoryID=28">
@@ -93,7 +93,7 @@
                  </td>
                  <td>  
                        <ul style="list-style-type: none; list-style-image: none">
-                       <li>
+                       <li >
                            <asp:TextBox ID="tbEmail1" runat="server" Width="165px" Height="20px"   CssClass="inputstyle"></asp:TextBox>
                        </li>
                        <li>
@@ -103,10 +103,10 @@
                        </ul>
                  </td>
                   <td>
-                      <telerik:RadComboBox ID="ddlRoomPrices" runat="server" Width="165px" EnableLoadOnDemand="false"></telerik:RadComboBox> 
+                      <telerik:RadComboBox ID="ddlRoomPrices" runat="server" Width="135px" EnableLoadOnDemand="false" DropDownWidth="230px"></telerik:RadComboBox> 
                   </td>
                   <td rowspan="3" width="220px">
-                    <asp:TextBox ID="tbMessage" runat="server" Width="220px" Height="70px" TextMode="MultiLine" CssClass="inputstyle"></asp:TextBox>
+                    <asp:TextBox ID="tbMessage" runat="server" Width="180px" Height="70px" TextMode="MultiLine" CssClass="inputstyle"></asp:TextBox>
                           <div class="VIKKI_HiddenButton">
                         <asp:TextBox ID="tbCFH1" runat="server" Width="165px"  BackColor="White" CssClass="inputstyle"></asp:TextBox>
                         </div>  
@@ -170,7 +170,7 @@
                 <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="<%$Resources:Vikkisoft, RequiredField %>" ControlToValidate="tbName" Display="Dynamic" ValidationGroup="ContactUsValidation"></asp:RequiredFieldValidator>
             </td>
             <td  ROWSPAN="3">
-                <asp:TextBox ID="tdComments"  runat="server" TabIndex="6" Width="400px"  TextMode="MultiLine" Rows="7" MaxLength="7"></asp:TextBox>
+                <asp:TextBox ID="tdComments"  runat="server" TabIndex="6" Width="300px"  TextMode="MultiLine" Rows="7" MaxLength="7"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvComment" runat="server" ErrorMessage="<%$Resources:Vikkisoft, RequiredField %>" ControlToValidate="tdComments" Display="Dynamic" ValidationGroup="ContactUsValidation"></asp:RequiredFieldValidator>
             </td>
         </tr>                           
@@ -190,7 +190,7 @@
             <td>
             </td>
             <td>
-                <asp:TextBox ID="tbCFH" runat="server" TabIndex="7" Width="400px" ></asp:TextBox>
+                <asp:TextBox ID="tbCFH" runat="server" TabIndex="7" Width="350px" ></asp:TextBox>
             </td>
         </tr>
         <tr>

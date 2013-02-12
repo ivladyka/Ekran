@@ -14,8 +14,9 @@ Website: www.buildinternet.com/project/supersized
 }
     body
 {
-  
-
+ 
+ font-size:10pt;
+ font-family: arial
 }
 	*{
 	    margin:0;
@@ -25,6 +26,7 @@ Website: www.buildinternet.com/project/supersized
 	    text-decoration: none;
 	    outline: none;
         color: #B1A9A9;
+        cursor:pointer;
 	   
 	}
 	img{
@@ -42,7 +44,6 @@ ul
 		height:100%;         
 		position:absolute; 
 		top:0; 
-		overflow:auto; 
 		z-index:4; 
 	}
 	
@@ -107,16 +108,15 @@ img { border:none; }
 }
 #supersized
 {
- 
-    z-index: -999;
-    height: 500px;
-    width: 1200px;
-    vertical-align: middle;
-    text-align: center;
-      top: 40%;
+     height: 458px;
     left: 50%;
     margin: -250px 0 0 -600px;
-     position: absolute;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    vertical-align: middle;
+    width: 1100px;
+    z-index: -999;
 }
 #supersized img 
 { 
@@ -144,12 +144,12 @@ img { border:none; }
     z-index: -30;
     position: fixed;
     overflow: hidden;
-     top: 41.5%;
+    top: 41.5%;
     left: 50%;
-    margin: -250px 0 0 -600px;
+    margin: -229px 0 0 -550px;
     border: solid 2px #f0bc5e;
-        height: 496px;
-    width: 1196px;
+    height: 454px;
+    width: 1096px;
 }
 #supersized a 
 { 
@@ -181,17 +181,17 @@ img { border:none; }
 }
 .yellowshadow
 {
-    width: 180px;
-    height: 150px;   
+width: 180px;
+height: 150px;   
 -webkit-box-shadow: 10 0 150px rgba(252, 202, 101, .9);
 -moz-box-shadow:0 0 150px rgba(252, 202, 101, .9);
 box-shadow: 0 0 150px rgba(252, 202, 101, .9); 
 behavior: url(PIE.htc);
 position: absolute;
- vertical-align: top;
- top:0px;
-         position:absolute;
-    left:0px; 
+vertical-align: top;
+top:0px;
+position:absolute;
+left:0px; 
 z-index:99;
  margin-left: 20px; 
 }
@@ -204,27 +204,24 @@ height: 100px;
 box-shadow: 0 0 150px rgba(252, 202, 101, 1.0); 
 behavior: url(PIE.htc);
 position: absolute;
- vertical-align: top;
- top:0px;
+vertical-align: top;
+top:0px;
 z-index:99;
- margin-left: 20px;
- float:right;
- background-color: rgba(252, 202, 101, .9);
- 
+margin-left: 20px;
+float:right;
+background-color: rgba(252, 202, 101, .9); 
 }
 .FooterTextContent
 {
     margin: 0px auto 0px auto;   
     display: block;
-    padding-left: 20px;
-    padding-right: 0px;    
     vertical-align: bottom;
     bottom: 0px !important;  
     min-height: 60%;
     max-height: 90%;
     text-align: left;
     position:absolute;
-    width:1170px;
+    width:960px;   
 }
 .FooterContentBlock ul
 {
@@ -232,7 +229,10 @@ z-index:99;
     list-style-image: none;
     list-style-position: inside;
     display: block;
+    margin-left:20px;
 }
+.FooterContentBlock #tablebookingpage ul
+{margin-left:0px;}
 .FooterContentBlock ul li
 {
     list-style-type: disc !important;
@@ -256,9 +256,8 @@ z-index:99;
     border-width: 0px;
     behavior: url(PIE.htc);
     border-color: #3d0303;
-    overflow: visible;
-    min-height:130px;
-    padding:0px
+    overflow: visible;    
+    padding:20px
 }
 .FooterContentBlockstyle
 {
@@ -283,16 +282,20 @@ z-index:99;
     min-height:80%;
 }
 .categoryName
-{ display: block;
-  padding:20PX;
+{ display: block; 
 }
 .Bookingpanel, #tablebookingpage
 {
     z-index:9999;
     float:left;
     display:block;
-    overflow: visible;    
-    margin-top:-20px;
+    overflow: visible;     
+}
+.FooterTextContent #tablebookingpage ul li
+{
+    list-style-type: none !important;
+    list-style-image: none !important;
+    list-style-position: inside !important;
 }
 .PriceRoomstyle
 {
@@ -318,7 +321,7 @@ z-index:99;
      margin: 0 auto ;
      padding-bottom:20px;
      bottom: 0px !important;  
-     width:1000px;
+     width:900px;
 }
     .Bookingpanel span
     {
@@ -342,7 +345,7 @@ z-index:99;
 .FooterTextContent h3
 {
         text-align:left  !important;
-        vertical-align:bottom;
+        vertical-align:bottom;        
 }
 .FooterTextContent ul
 {
@@ -375,7 +378,7 @@ h3
 #header
 {
     margin: 0px auto;
-    width: 1200px;
+    width: 960px;
     height: 240px;
     vertical-align: top;
     vertical-align:middle;    
@@ -408,11 +411,11 @@ h3
     -webkit-background-size: 100% 100%;
     -khtml-background-size: 100% 100%;
     background-size: 100% 100%;
-  behavior: url(PIE.htc);
-    overflow:auto;
+    behavior: url(PIE.htc);
+    overflow: hidden;
     display: block;
     min-height:300px;
-    min-width:1200px;
+    min-width:960px;
     height:45%;
     top:0px;
     text-align:center;
@@ -441,12 +444,12 @@ h3
 {
       width:750px;
       height:100px;
-      left:230px;
+      left:210px;
       position:absolute;
 }
 .lilanguages
-{    left:970px;
-      position:absolute;
+{    left:870px;
+     position:absolute;
 }
 #logo
 {   
@@ -490,24 +493,13 @@ h3
 }
 #footer div
 { 
-    width:1200px;
+    width:960px;
     text-align:center;   
     display:block;
     float:none;
    font-family: OptimaCyr !important; 
 }
 .bottomblock
-{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    min-height: 300px;
-    height: 48%;
-    float: none;
-    display:block;
-    overflow:hidden
-}
-#content
 { background-image: url('Images/bottombg.png');
     background-position:center bottom;
     background-repeat: no-repeat;
@@ -516,12 +508,23 @@ h3
     -khtml-background-size: 100% 100%; /* Konqueror ≥ 3.5.4 */
     -moz-background-size: 100% 100%; /* Firefox ≥ 3.6 */
     background-size: 100% 100%; /* браузеры с поддержкой CSS3: FF ≥ 4, Opera ≥ 10.53, IE ≥*/        
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    min-height: 300px;
+    height: 48%;
+    float: none;
+    display:block;
+    overflow:auto;
+}
+#content
+{
     display:block;
     float:none;
    height:100%;
    margin: 0px auto;
-    width: 100%;
-    min-width:1200px;
+   width: 100%;
+    
    overflow: auto; 
     z-index: 9999;
     margin-right: auto;
@@ -784,7 +787,7 @@ div.RadComboBoxDropDown_Black .rcbHovered {
     font-size:10pt;     
    height:30%;
    margin-left:20px;
-   margin-bottom:15px;
+   margin-bottom:10px;
    overflow: hidden;
 }
 .homepanel ul
@@ -864,7 +867,7 @@ behavior: url(PIE.htc);
 	
 #footertext
 {
-    width: 1200px;
+    width: 960px;
     vertical-align: bottom !important;
     position:relative;
     bottom: 0px;
@@ -894,7 +897,7 @@ behavior: url(PIE.htc);
   float: right;
   text-align: right !important;
   padding-right:40px;
-  margin-top:-45px;
+  margin-top:-25px;
 }
 .HomeBOOKING select,  #tablebookingpage select,.contactbookingtable select
 {
@@ -912,7 +915,7 @@ behavior: url(PIE.htc);
     float:left;
 }
 .FooterContentBlockContactUSpage
-{width:1000px;
+{width:880px;
  margin: 0px auto 20px auto;
     display: block;
     position: absolute;
@@ -1027,7 +1030,7 @@ html body .RadInput_Black .riTextBox, html body .RadInputMgr_Black
 { 
     right:0; 
     background:url('Images/thumb-forward.gif') no-repeat center center;
-    margin-right:40px;
+    margin-right:20px;
 }
 
 #thumb-back:hover, #thumb-forward:hover
@@ -1110,7 +1113,7 @@ ul#thumb-list li:hover
 
 }
 .Gallerystyle
-{width:830px;
+{width:800px;
  float:right;
  top:0px;
  position:absolute;
@@ -1130,15 +1133,15 @@ ul#thumb-list li:hover
 }
 .Gallerystyle1
 {
-    width:1160px;  
+    width:960px;  
     min-height:100%;
     display: block;  
     overflow:visible;
 }
 .CategoryContentGallery
 {
-     width:250px;
-  margin-top:20px;
+     width:150px;
+  margin-top:60px;
     min-height: 60%;
 }
 .RadComboBox .rcbInputCell .rcbInput 

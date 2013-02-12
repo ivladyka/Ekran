@@ -29,7 +29,6 @@
                 transition_speed: 2000, 	// Speed of transition			
                 slide_links: false, // Individual links for each slide (Options: false, 'num', 'name', 'blank')
                 slides: [<%=ImageList %>]
-
             });
         });
 	</script>
