@@ -262,13 +262,13 @@ background-color: rgba(252, 202, 101, .9);
 .FooterContentBlockstyle
 {
 
-    margin: 0px auto 20px auto;
+    margin: 0px auto 10px auto;
     display: block;
     position: absolute;
     vertical-align: bottom;
     bottom: 0px !important;     
     overflow: visible;
-    min-height:62%;
+    min-height:50%;
 }
 .FooterContentBlockstylegallery
 {
@@ -345,7 +345,8 @@ background-color: rgba(252, 202, 101, .9);
 .FooterTextContent h3
 {
         text-align:left  !important;
-        vertical-align:bottom;        
+        vertical-align:bottom;           
+        margin-bottom:10px;    
 }
 .FooterTextContent ul
 {
@@ -360,6 +361,15 @@ background-color: rgba(252, 202, 101, .9);
     list-style-position: inside;
     display: list-item;
     overflow:visible
+}
+#ctl00_TopMenu_mnTop a.static:hover 
+{
+   text-shadow:1px 1px 3px #3a0202 !important;
+   
+}
+#ctl00_TopMenu_mnTop a.static:hover 
+{
+   text-shadow:1px 1px 3px #3a0202 !important;
 }
 .bookbutton
 {
@@ -450,6 +460,8 @@ h3
 .lilanguages
 {    left:870px;
      position:absolute;
+     margin-top:3px;
+     font-size:11px;
 }
 #logo
 {   
@@ -747,7 +759,17 @@ div.RadComboBoxDropDown_Black .rcbHovered {
     cursor:pointer;
     z-index:1000 !important;
     position:relative;
+    -webkit-box-shadow: 1px 1px 1px 1px rgba(76, 0, 1,  0.3);
+    box-shadow: 1px 1px 1px 1px rgba(76, 0, 1,  0.3);
 }
+.formbutton:hover
+{ background-color:#f9b41c;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(76, 0, 1, 0.1);
+    box-shadow: 0px 0px 1px 0px rgba(76, 0, 1,  0.1);
+}
+
+.rcbList
+{background-color:#682915;}
 #pnlBookingHome
 {
     font-size:9pt;
@@ -817,9 +839,9 @@ div.RadComboBoxDropDown_Black .rcbHovered {
     overflow: visible;
     float: left;
     display: inline;
-    padding: 2px;    
-      height: 102px;
-     background: #c1853e; /* Old browsers */
+padding: 2px;    
+height: 102px;
+background: #c1853e; /* Old browsers */
 background: -moz-linear-gradient(top, #e1a251 0%, #430001 50%, #e1a251 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1a251), color-stop(50%,#430001), color-stop(100%,#e1a251)); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, #e1a251 0%,#430001 50%,#e1a251 100%); /* Chrome10+,Safari5.1+ */
@@ -830,8 +852,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1a251', end
  -webkit-box-shadow: 0 0 150px rgba(252, 202, 101, 1.0);
 -moz-box-shadow:0 0 150px rgba(252, 202, 101, 1.0);
 box-shadow: 0 0 150px rgba(252, 202, 101, 1.0); 
-
 }
+.homepanel ul li:hover, ul.ChildCategoriespanel li:hover
+{
+    margin: 0px 5px 0px 5PX;
+    list-style-type: none;
+    list-style-image: none;
+    overflow: visible;
+    float: left;
+    display: inline;
+padding: 2px;    
+height: 102px;
+background: #c1853e; /* Old browsers */
+background: -moz-linear-gradient(top, #430001 0%, #e1a251 50%, #430001 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#430001), color-stop(50%,#e1a251), color-stop(100%,#430001)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #430001 0%,#e1a251 50%,#430001 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #430001 0%,#e1a251 50%,#430001 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #430001 0%,#e1a251 50%,#430001 100%); /* IE10+ */
+background: linear-gradient(to bottom, #430001 0%,#e1a251 50%,#e1a251 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1a251', endColorstr='#e1a251',GradientType=0 ); /* IE6-9 */
+ -webkit-box-shadow: 0 0 150px rgba(252, 202, 101, 1.0);
+-moz-box-shadow:0 0 150px rgba(252, 202, 101, 1.0);
+box-shadow: 0 0 150px rgba(252, 202, 101, 1.0); 
+}
+
 .homepanel ul li a, .ChildCategoriespanel li a
 {
         margin:0px !important;
