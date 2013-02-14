@@ -34,6 +34,7 @@ public partial class DefaultMP : MasterPageBase
         if (!Page.IsPostBack)
         {
             LoadCommonPageData();
+            aLogo.HRef = SiteURL + "Default.aspx";
         }
     }
 
@@ -73,13 +74,13 @@ public partial class DefaultMP : MasterPageBase
             {
                 do
                 {
-                    imageList += "{image: '" + Utils.GaleryImagePath.Replace("~/", "") + "/" + g.s_PhotoName + "' },";
+                    imageList += "{image: '" + SiteURL + Utils.GaleryImagePath.Replace("~/", "") + "/" + g.s_PhotoName + "' },";
                 } while (g.MoveNext());
             }
             imageList = imageList.TrimEnd(',');
             if (imageList.TrimEnd() == "")
             {
-                imageList = "{image: 'images/1.jpg' },{ image: 'images/2.jpg' },{ image: 'images/3.jpg' }";
+                imageList = "{image: '" + SiteURL + "images/1.jpg' },{ image: '" + SiteURL + "images/2.jpg' },{ image: '" + SiteURL + "images/3.jpg' }";
             }
             return imageList;
         }
@@ -92,6 +93,10 @@ public partial class DefaultMP : MasterPageBase
             if (Request.Params["CategoryID"] != null)
             {
                 return int.Parse(Request.Params["CategoryID"]);
+            }
+            if (Page.RouteData.Values["CategoryID"] != null)
+            {
+                return int.Parse(Page.RouteData.Values["CategoryID"].ToString());
             }
             return 1;
         }
@@ -146,6 +151,18 @@ public partial class DefaultMP : MasterPageBase
             {
                 m_Description = Resources.Vikkisoft.MetaDescription;
             }
+        }
+    }
+
+    public string JavaScripts
+    {
+        get
+        {
+            return "<script src='" + SiteURL + "js/Scripts.js' type='text/javascript'></script>"
+                + "<script type='text/javascript' src='" + SiteURL + "js/jquery.min.js'></script>"
+                + "<script type='text/javascript' src='" + SiteURL + "js/supersized.3.2.7.min.js'></script>"
+                + "<script type='text/javascript' src='" + SiteURL + "js/jquery.easing.min.js'></script>"
+                + "<script type='text/javascript' src='" + SiteURL + "js/supersized.shutter.min.js'></script>";
         }
     }
 }

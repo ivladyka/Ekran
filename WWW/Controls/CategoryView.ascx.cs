@@ -26,6 +26,9 @@ public partial class CategoryView : ControlBase
                 dpCheckInDate.MinDate = DateTime.Now;
                 dpCheckOutDate.MinDate = DateTime.Now;
                 pnlCategoryContent.Visible = false;
+                aAboutUs.HRef = Utils.GenerateFriendlyURL(28);
+                aGallery.HRef = Utils.GenerateFriendlyURL(3);
+                aEvents.HRef = Utils.GenerateFriendlyURL(19);
                 break;
             case 23:
                 pnlCategoryContent.Visible = false;
@@ -81,6 +84,10 @@ public partial class CategoryView : ControlBase
             if (Request.Params["CategoryID"] != null)
             {
                 return int.Parse(Request.Params["CategoryID"]);
+            }
+            if (Page.RouteData.Values["CategoryID"] != null)
+            {
+                return int.Parse(Page.RouteData.Values["CategoryID"].ToString());
             }
             return 1;
         }
@@ -183,7 +190,7 @@ public partial class CategoryView : ControlBase
             Menu menu = ((MasterPageBase)Page.Master).TopMenuControl;
             foreach (MenuItem item in menu.Items)
             {
-                if (item.NavigateUrl.IndexOf("&CategoryID=" + CategoryID) >= 0)
+                if (item.NavigateUrl.IndexOf("/hotel-" + CategoryID + "/") >= 0)
                 {
                     if (item.ChildItems.Count > 0)
                     {
@@ -295,6 +302,7 @@ public partial class CategoryView : ControlBase
         Rooms = ddlRoom.SelectedValue;
         Adults = ddlAdult.SelectedValue;
         Children = ddlChild.SelectedValue;
+        Response.Redirect(Utils.GenerateFriendlyURL(27));
         Response.Redirect("Default.aspx?content=CategoryView&CategoryID=27");
     }
 

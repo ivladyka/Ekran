@@ -13,13 +13,9 @@
     <telerik:RadCodeBlock ID="RadCodeBlock2" runat="server">
     <%=MetaDescription %>
     <%=MetaKeywords%>
+    <%=JavaScripts%>
     </telerik:RadCodeBlock>
     <meta name="Revisit-after" content="3 days" />
-    <script src="js/Scripts.js" type="text/javascript"></script>
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="js/supersized.shutter.min.js"></script>
     <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
     <script type="text/javascript">
         jQuery(function ($) {
@@ -53,12 +49,11 @@
            <ul>
              <li class="lilogo">
               <div id="logo"></div>
-              <a href="Default.aspx">
+              <a href="Default.aspx" id="aLogo" runat="server">
                   <div class="yellowshadow"></div>
                   <div class="yellowshadow"></div>
                   <div class="yellowshadow"></div>
                   <div id="logoyellow"></div>
-                 
               </a>
               </li>
               <li class="limenu">

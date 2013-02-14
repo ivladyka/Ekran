@@ -33,7 +33,7 @@
   <asp:Panel ID="pnlHomeSection" runat="server" Visible="false" CssClass="homepanel" HorizontalAlign="right">               
             <ul>
         <li id="liAbourUS" runat="server">
-            <a href="Default.aspx?content=CategoryView&CategoryID=28">
+            <a id="aAboutUs" runat="server" href="Default.aspx?content=CategoryView&CategoryID=28">
                 <asp:Image ID="Image1" runat="server"  ImageUrl="~/Images/WEBSite/b914a224-8e63-4197-bf86-906b5364e9e5_s.jpg"/>            
                 <div class="subpagetitle">           
                    <h4><asp:Label ID="Label2" runat="server" Text="<%$Resources:Vikkisoft, AboutUs %>">:</asp:Label></h4>
@@ -41,7 +41,7 @@
             </a>
       </li>
       <li id="liGallery" runat="server">
-          <a href="Default.aspx?content=CategoryView&CategoryID=3">        
+          <a id="aGallery" runat="server" href="Default.aspx?content=CategoryView&CategoryID=3">        
                <asp:Image ID="Image2" runat="server"  ImageUrl="~/Images/WEBSite/775352ca-2078-4b46-853b-2c831876263e_s.jpg"/>
                <div class="subpagetitle">           
                     <h4><asp:Label ID="Label1" runat="server" Text="<%$Resources:Vikkisoft, Gallery %>">:</asp:Label></h4>
@@ -49,7 +49,7 @@
          </a>
       </li>
       <li id="liEvents" runat="server">
-          <a href="Default.aspx?content=CategoryView&CategoryID=19">     
+          <a id="aEvents" runat="server" href="Default.aspx?content=CategoryView&CategoryID=19">     
                <asp:Image ID="Image3" runat="server"  ImageUrl="~/Images/WEBSite/f3dbd0ad-697a-4aa6-b253-283e22c6109e_s.jpg"/>      
                <div class="subpagetitle">           
                    <h4><asp:Label ID="Label4" runat="server" Text="<%$Resources:Vikkisoft, Events %>">:</asp:Label></h4>

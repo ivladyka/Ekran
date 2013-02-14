@@ -1,5 +1,6 @@
 ﻿using System.Web.UI;
 using System.Web.UI.WebControls;
+using System;
 
 /// <summary>
 /// Summary description for MasterPageBase
@@ -49,6 +50,28 @@ public class MasterPageBase : System.Web.UI.MasterPage
                 }
             }
             return null;
+        }
+    }
+
+    public string SiteURL
+    {
+        get
+        {
+            string serverURL = Request.Url.Scheme + Uri.SchemeDelimiter + System.Web.HttpContext.Current.Request.ServerVariables["SERVER_NAME"];
+            if (!Request.Url.IsDefaultPort)
+                serverURL += ":" + Request.Url.Port;
+            return serverURL + "/";
+        }
+    }
+
+    public string SiteURLRelative
+    {
+        get
+        {
+            string serverURLRel = "";
+            if (Request.Url.PathAndQuery.IndexOf("/hotel-") > -1)
+                serverURLRel = "../../../";
+            return serverURLRel;
         }
     }
 }

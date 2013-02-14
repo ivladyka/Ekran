@@ -60,6 +60,10 @@ public partial class GalleryView : ControlBase
             {
                 return int.Parse(Request.Params["CategoryID"]);
             }
+            if (Page.RouteData.Values["CategoryID"] != null)
+            {
+                return int.Parse(Page.RouteData.Values["CategoryID"].ToString());
+            }
             return 0;
         }
     }

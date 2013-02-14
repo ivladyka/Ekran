@@ -212,64 +212,66 @@ public class Utils
     public static void InitMenu(Menu menu, bool onlyTopLevel, bool ukr, bool adminMenu)
     {
         Hashtable catTitles = new Hashtable();
+        Hashtable catTitlesEng = new Hashtable();
         Category cat = new Category();
         if (cat.LoadAll())
         {
             do
             {
                 catTitles.Add(cat.CategoryID, cat.GetColumn("Name" + (ukr ? "" : LangPrefix)).ToString().ToUpper());
+                catTitlesEng.Add(cat.CategoryID, cat.GetColumn("Name_en").ToString().ToUpper());
             } while (cat.MoveNext());
         }
 
         menu.Items.Clear();
         if (adminMenu)
         {
-            menu.Items.Add(AddMenuItem("~/Default.aspx", 0, catTitles));
+            menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 1, catTitles, catTitlesEng, adminMenu));
         }
-        menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 2, catTitles));
+        menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 2, catTitles, catTitlesEng, adminMenu));
         if (!onlyTopLevel)
         {
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 28, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 3, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 5, catTitles));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 28, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 3, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 5, catTitles, catTitlesEng, adminMenu));
         }
-        menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 7, catTitles));
+        menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 7, catTitles, catTitlesEng, adminMenu));
         if (!onlyTopLevel)
         {
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 8, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 9, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 10, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 11, catTitles));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 8, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 9, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 10, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 11, catTitles, catTitlesEng, adminMenu));
         }
-        menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 12, catTitles));
+        menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 12, catTitles, catTitlesEng, adminMenu));
         if (!onlyTopLevel)
         {
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 13, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 14, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 15, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 16, catTitles));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 13, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 14, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 15, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 16, catTitles, catTitlesEng, adminMenu));
         }
-        menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 18, catTitles));
+        menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 18, catTitles, catTitlesEng, adminMenu));
         if (!onlyTopLevel)
         {
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 19, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 20, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 21, catTitles));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 19, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 20, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 21, catTitles, catTitlesEng, adminMenu));
         }
-        menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 22, catTitles));
+        menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 22, catTitles, catTitlesEng, adminMenu));
         if (!onlyTopLevel)
         {
-           
-            menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 23, catTitles));          
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 24, catTitles));
-            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 25, catTitles));
+
+            menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 23, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 24, catTitles, catTitlesEng, adminMenu));
+            menu.Items[menu.Items.Count - 1].ChildItems.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 25, catTitles, catTitlesEng, adminMenu));
         }
         else
         {
-            menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 24, catTitles));
-            menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 25, catTitles));
+            menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 24, catTitles, catTitlesEng, adminMenu));
+            menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 25, catTitles, catTitlesEng, adminMenu));
         }
-        menu.Items.Add(AddMenuItem("~/Default.aspx?content=CategoryView", 27, catTitles));
+        menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=CategoryEdit", 27, catTitles, catTitlesEng, adminMenu));
         if (adminMenu)
         {
             menu.Items.Add(AddMenuItem("~/Office/Office.aspx?content=RoomList", "НОМЕРИ"));
@@ -278,24 +280,45 @@ public class Utils
         }
     }
 
-    private static void AddMenuItem(MenuItemCollection items, string url, int categotyID, Hashtable catTitles)
+    private static void AddMenuItem(MenuItemCollection items, string url, int categotyID, Hashtable catTitles, Hashtable catTitlesEng, bool adminMenu)
     {
         string title = "";
+        string titleEn = "ekran";
         if (catTitles[categotyID] != null)
         {
             title = catTitles[categotyID].ToString();
-            items.Add(AddMenuItem(url + "&CategoryID=" + categotyID.ToString(), "", title, categotyID));
+            if (adminMenu)
+            {
+                items.Add(AddMenuItem(url + "&CategoryID=" + categotyID.ToString(), "", title, categotyID));
+            }
+            else
+            {
+                if (catTitlesEng[categotyID] != null)
+                {
+                    titleEn = catTitlesEng[categotyID].ToString();
+                }
+                items.Add(AddMenuItem(GenerateFriendlyURL(titleEn, categotyID.ToString()), "", title, categotyID));
+            }
         }
     }
 
-    private static MenuItem AddMenuItem(string url, int categotyID, Hashtable catTitles)
+    private static MenuItem AddMenuItem(string url, int categotyID, Hashtable catTitles, Hashtable catTitlesEng, bool adminMenu)
     {
         string title = "";
+        string titleEn = "ekran";
         if (catTitles[(categotyID == 0 ? 1 : categotyID)] != null)
         {
             title = catTitles[(categotyID == 0 ? 1 : categotyID)].ToString();
         }
-        return AddMenuItem(url + (categotyID > 0 && url.Length > 0 ? "&CategoryID=" + categotyID.ToString() : ""), "", title, categotyID);
+        if (adminMenu)
+        {
+            return AddMenuItem(url + (categotyID > 0 && url.Length > 0 ? "&CategoryID=" + categotyID.ToString() : ""), "", title, categotyID);
+        }
+        if (catTitlesEng[categotyID] != null)
+        {
+            titleEn = catTitlesEng[categotyID].ToString();
+        }
+        return AddMenuItem(GenerateFriendlyURL(titleEn, categotyID.ToString()), "", title, categotyID);
     }
 
     private static MenuItem AddMenuItem(string url, string title)
@@ -349,5 +372,55 @@ public class Utils
         }
         Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
         Thread.CurrentThread.CurrentCulture = new CultureInfo(culture);
+    }
+
+    public static string GenerateFriendlyURL(string title, string id)
+    {
+        string friendlyURL = "/hotel-" + id + "/";
+        title = title.Trim();
+        title = title.Trim('-');
+
+        title = title.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        title = title.Replace("c#", "C-Sharp");
+        title = title.Replace("vb.net", "VB-Net");
+        title = title.Replace("asp.net", "Asp-Net");
+
+        title = title.Replace(".", "-");
+
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (title.Contains(strChar))
+            {
+                title = title.Replace(strChar, string.Empty);
+            }
+        }
+
+        title = title.Replace(" ", "-");
+
+        title = title.Replace("--", "-");
+        title = title.Replace("---", "-");
+        title = title.Replace("----", "-");
+        title = title.Replace("-----", "-");
+        title = title.Replace("----", "-");
+        title = title.Replace("---", "-");
+        title = title.Replace("--", "-");
+
+        title = title.Trim();
+        title = title.Trim('-');
+
+
+        return friendlyURL + title;
+    }
+
+    public static string GenerateFriendlyURL(int id)
+    {
+        Category cat = new Category();
+        if(cat.LoadByPrimaryKey(id))
+        {
+            return GenerateFriendlyURL(cat.s_Name_en, id.ToString());
+        }
+        return "Default.aspx";
     }
 }

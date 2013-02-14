@@ -29,6 +29,10 @@ public partial class GalleryPhotoView : ControlBase
             {
                 return int.Parse(HttpContext.Current.Request.QueryString["CategoryID"]);
             }
+            if (Page.RouteData.Values["CategoryID"] != null)
+            {
+                return int.Parse(Page.RouteData.Values["CategoryID"].ToString());
+            }
             return 0;
         }
     } 

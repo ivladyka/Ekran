@@ -24,12 +24,12 @@ public partial class Office_OfficeMP : MasterPageBase
                 foreach (MenuItem item in menu.Items)
                 {
                     TreeNode node = new TreeNode(item.Text);
-                    node.NavigateUrl = FormatURL(item.NavigateUrl);
+                    node.NavigateUrl = item.NavigateUrl;
                     SelectNode(node);
                     foreach (MenuItem childItem in item.ChildItems)
                     {
                         TreeNode childNode = new TreeNode(childItem.Text);
-                        childNode.NavigateUrl = FormatURL(childItem.NavigateUrl);
+                        childNode.NavigateUrl = childItem.NavigateUrl;
                         SelectNode(childNode);
                         node.ChildNodes.Add(childNode);
                     }
@@ -37,20 +37,6 @@ public partial class Office_OfficeMP : MasterPageBase
                 }
             }
         }
-    }
-
-    private string FormatURL(string input)
-    {
-        if (input.IndexOf("Default.aspx") >= 0)
-        {
-            string output = input.Replace("CategoryView", "CategoryEdit").Replace("Default.aspx", "Office/Office.aspx");
-            if (output.IndexOf("CategoryID") == -1)
-            {
-                output += "?content=CategoryEdit&CategoryID=1";
-            }
-            return output;
-        }
-        return input;
     }
 
     private void SelectNode(TreeNode node)
