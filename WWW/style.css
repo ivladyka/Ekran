@@ -347,6 +347,7 @@ background-color: rgba(252, 202, 101, .9);
         text-align:left  !important;
         vertical-align:bottom;           
         margin-bottom:10px;    
+        margin-left:20px;
 }
 .FooterTextContent ul
 {
@@ -474,13 +475,13 @@ h3
 }
 #logoyellow
 {
-    background-position: center bottom;
+    background-position: 0px 0px;
     width: 210px;
     height: 240px;
     vertical-align: top;
     position: absolute;
     top: 0px;
-    background-image: url('Images/logo.png');
+    background-image: url('Images/logo.png');    
     background-repeat: no-repeat;
     z-index:9000;
         position:absolute;
@@ -488,7 +489,8 @@ h3
 }
 #logoyellow:hover
 {
-    background-image: url('Images/logo1.png');
+    background-image: url('Images/logo.png');
+    background-position: -210px 0px;
 }
 #footer
 { 
@@ -728,7 +730,7 @@ div.RadComboBox_Black .rcbReadOnly .rcbArrowCellRight, div.RadComboBox_Metro .rc
     border-style:none !important;
 }
 div.RadComboBoxDropDown_Black .rcbHovered {
-    background-color: #4c0001 !important;
+    background-color: #682915 !important;
     color: #ffc33f !important;
     padding: 1px 5px !important;
     border: 0px none #000 !important;
@@ -768,8 +770,6 @@ div.RadComboBoxDropDown_Black .rcbHovered {
     box-shadow: 0px 0px 1px 0px rgba(76, 0, 1,  0.1);
 }
 
-.rcbList
-{background-color:#682915;}
 #pnlBookingHome
 {
     font-size:9pt;
@@ -878,10 +878,11 @@ box-shadow: 0 0 150px rgba(252, 202, 101, 1.0);
 
 .homepanel ul li a, .ChildCategoriespanel li a
 {
-        margin:0px !important;
-        padding:0px !important;
-        display: block;
-       
+    margin: 0px !important;
+    padding: 0px !important;
+    display: block;
+    height: 102px !important;
+    overflow: hidden;
 }
 .homepanel ul li img
 {
