@@ -412,6 +412,7 @@ public class Utils
 
 
         return friendlyURL + title;
+        //return "~/Default.aspx?content=CategoryView&CategoryID=" + id.ToString();
     }
 
     public static string GenerateFriendlyURL(int id)

@@ -190,7 +190,8 @@ public partial class CategoryView : ControlBase
             Menu menu = ((MasterPageBase)Page.Master).TopMenuControl;
             foreach (MenuItem item in menu.Items)
             {
-                if (item.NavigateUrl.IndexOf("/hotel-" + CategoryID + "/") >= 0)
+                if (item.NavigateUrl.IndexOf("/hotel-" + CategoryID + "/") >= 0
+                    || item.NavigateUrl.IndexOf("&CategoryID=" + CategoryID) >= 0)
                 {
                     if (item.ChildItems.Count > 0)
                     {
