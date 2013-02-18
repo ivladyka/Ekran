@@ -50,8 +50,8 @@ public partial class GalleryList : ListControlBase, Interfaces.IColouredGrid
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
-        ModaldialogHeight = 200;
-        ModaldialogWidth = 620;
+        ModaldialogHeight = 220;
+        ModaldialogWidth = 650;
         EditURLAdditionalParameters = "&CategoryID=" + CategoryID;
     }
 

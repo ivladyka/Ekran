@@ -12,7 +12,7 @@
 <body style="padding: 0px; margin:0px; width:auto; height: auto; background-color: White; background-image: none;"  onload="VIKKI_LoadModalDialog();">
     <form id="form1" runat="server" style="padding: 0px; margin:0px; height: auto; width:auto;" >
     <telerik:RadScriptManager runat="Server" ID="RadScriptManager1" />
-    <table  border="0" cellpadding="0" cellspacing="0" class="logintable">
+    <table  border="0" cellpadding="0" cellspacing="0" class="modalWindowTable">
 				<tr>
 					<td>
 					<table width="100%" cellpadding="0" cellspacing="0" border="0">
