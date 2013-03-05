@@ -1193,3 +1193,21 @@ ul#thumb-list li:hover
 {
      height:19px;  
 }
+.copirightdiv
+{
+    margin:-16px auto 0 auto;
+    width:1200px;
+    float:none;
+    color:#9b5a23;
+    display:block;
+    font-size:7pt;   
+}
+.copirightdiv a
+{
+    color:#53150a;   
+}
+.copirightdiv a:hover
+{
+    color:#53150a;   
+}
+
