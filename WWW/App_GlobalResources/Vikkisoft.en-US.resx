@@ -139,7 +139,7 @@
     <value>Client</value>
   </data>
   <data name="Copyright" xml:space="preserve">
-    <value>All rights reserved. Site development</value>
+    <value>Copyright © Hotel Ekran. All rights reserved.</value>
   </data>
   <data name="Feedback" xml:space="preserve">
     <value>Feedback</value>
@@ -209,5 +209,8 @@
   </data>
   <data name="Gallery" xml:space="preserve">
     <value>Gallery</value>
+  </data>
+  <data name="SiteDevelopment" xml:space="preserve">
+    <value>Web Site developed by</value>
   </data>
 </root>

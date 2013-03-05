@@ -139,7 +139,7 @@
     <value>Client</value>
   </data>
   <data name="Copyright" xml:space="preserve">
-    <value>Wszelkie prawa zastrzeżone.</value>
+    <value>Copyright © Hotel Ekran. Wszelkie prawa zastrzeżone.</value>
   </data>
   <data name="Feedback" xml:space="preserve">
     <value>Sprzężenie zwrotne</value>
@@ -209,5 +209,8 @@
   </data>
   <data name="Gallery" xml:space="preserve">
     <value>Galerię</value>
+  </data>
+  <data name="SiteDevelopment" xml:space="preserve">
+    <value>Tworzenie stron WWW</value>
   </data>
 </root>

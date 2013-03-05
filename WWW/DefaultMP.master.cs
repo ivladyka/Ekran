@@ -47,7 +47,7 @@ public partial class DefaultMP : MasterPageBase
     {
         get
         {
-            return Resources.Vikkisoft.Copyright;
+            return Resources.Vikkisoft.Copyright + " 2009 - " + DateTime.Now.Year.ToString();
         }
     }
 
@@ -163,6 +163,14 @@ public partial class DefaultMP : MasterPageBase
                 + "<script type='text/javascript' src='" + SiteURL + "js/supersized.3.2.7.min.js'></script>"
                 + "<script type='text/javascript' src='" + SiteURL + "js/jquery.easing.min.js'></script>"
                 + "<script type='text/javascript' src='" + SiteURL + "js/supersized.shutter.min.js'></script>";
+        }
+    }
+
+    public string SiteDevelopment
+    {
+        get
+        {
+            return Resources.Vikkisoft.SiteDevelopment + ":";
         }
     }
 }

@@ -85,8 +85,8 @@
                  <asp:ContentPlaceHolder id="cphWithoutScroll" runat="server">        
                  </asp:ContentPlaceHolder>
             </div>  
-            <div class="copirightdiv">	<div style="float:left; padding-left:30px;">Copyright ©Hotel Ekran. All rights reserved. 2009 - 2013</div>
-            <div  style=" float:right; padding-right:30px;">Web Site developed by: <a href="http://www.vikkisoft.com">VIKKI soft</a></div></div>          
+            <div class="copirightdiv">	<div style="float:left; padding-left:30px;"><%=Copyright%></div>
+            <div  style=" float:right; padding-right:30px;"><%=SiteDevelopment%> <a href="http://www.vikkisoft.com" target="_blank">VIKKI Soft</a></div></div>          
     </div> </div><a style="color: White; cursor:default; display:none; visibility:hidden;" href="http://www.yourtravel.biz" target="_blank">Your Travel</a>
 </div>
  </form>   

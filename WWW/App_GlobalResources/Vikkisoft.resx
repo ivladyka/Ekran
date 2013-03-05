@@ -139,7 +139,7 @@
     <value>Клієнт</value>
   </data>
   <data name="Copyright" xml:space="preserve">
-    <value>Всі права застережено. Створення сайту</value>
+    <value>Copyright © Готель Екран. Всі права застережено.</value>
   </data>
   <data name="Feedback" xml:space="preserve">
     <value>Зворотній зв'язок</value>
@@ -209,5 +209,8 @@
   </data>
   <data name="Gallery" xml:space="preserve">
     <value>Галерея</value>
+  </data>
+  <data name="SiteDevelopment" xml:space="preserve">
+    <value>Створення сайту</value>
   </data>
 </root>
